@@ -6,23 +6,28 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="Pokusaj.css">
+  <link rel="stylesheet" href="homepage.css">
   <title>MaxxProdaja</title>
   <link rel="shortcut icon" href="maxShort.png"/>
 </head>
 <body>
-  <nav class="navbar navbar-inverse">
+  <div>
+  <nav class="bar, navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
         <a class="navbar-brand" href="#"><img src="maxShort.png" height="20px" width="40px"></img></a>
       </div>
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav navbar-left">
         <li class="active"><a href="#">Pocetna</a></li>
-        <li><a href="#">Kupujem</a></li>
+        <li><a href="#" >Kupujem</a></li>
         <li><a href="#">Menjam</a></li>
         <li><a href="#">Maxujem</a></li>
       </ul>
-      <form class="navbar-form navbar-left" action="/action_page.php">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+      <form class="navbar-form navbar-right" action="/action_page.php">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
         </div>
@@ -30,10 +35,76 @@
       </form>
     </div>
   </nav>
-  <div>
-    <img src="pare11.jpg" class="img-responsive"></img>
+  <div class="biglogo" style="max-width:50%" >
+    <img class="rounded-circle, mySlides" alt="Cinque Terre" src="Maxlong.jpg" style="width:50%">
+    <img class="rounded-circle, mySlides" alt="Cinque Terre" src="pare2.jpg" style="width:50%">
+    <img class="mySlides" src="pare11.jpg" style="width:50%">
   </div>
+  <!-- <script>newFunction();</script> -->
+  <script>
+  var myIndex = 0;
+  carousel();
   
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+  }
+  </script>
+  <!-- <div class="biglogo">
+    <img src="Maxlong.jpg" class="biglogoimg"> </img>
+  </div> -->
+  <div class="pozadina">
+    <img src="pare11.jpg" class="image-fluid" alt="Responsive image"></img>
+  </div>
+  <div class="Centriran">
+    <div class="container-fluid bg-3 text-center">
+      <h1>USLOVI KORIŠĆENJA</h1>
+
+<h3>OPŠTE ODREDBE</h3>
+Ovim Uslovima korišćenja se uređuju prava i obaveze u vezi sa korišćenjem PolovniAutomobili.com servisa. Servis koji se nalazi na Internet adresi http://www.polovniautomobili.com (u daljem tekstu: Servis) i predstavlja uslugu informacionog društva, bilo da se Servisu pristupa putem Interneta ili putem aplikacija za mobilne uređaje, koju pruža INFOSTUD 3 DOO SUBOTICA, Vladimira Nazora 7, 24000 Subotica, Republika Srbija, matični broj: 20175095, PIB: 104505119 (u daljem tekstu: Kompanija).
+<br><br>
+Ovi Uslovi korišćenja čine sastavni deo Servisa i predstavljaju odredbe ugovora koji se zaključuje između Kompanije i svakog pojedinog korisnika Servisa. Kompanija omogućava korišćenje Servisa fizičkim i pravnim licima, isključivo na način i pod uslovima opisanim u ovim Uslovima korišćenja, na način i pod uslovima pod kojima se pruža usluga informacionog društva.
+<br><br>
+Pristupom i korišćenjem Servisa Kompanije, korisnici pristaju na Uslove korišćenja, te na taj način zaključuju ugovor po pristupu sa Kompanijom kao pružaocem usluge informacionog društva.
+<br><br>
+Na svaki pristup sadržajima Servisa, primenjuju se ovi Uslovi korišćenja.
+<br><br>
+Poslovanje Kompanije putem ovog Servisa regulisano je prevashodno Zakonom o elektronskoj trgovini, Zakonom o obligacionim odnosima, Zakonom o oglašavanju, Zakonom o autorskom i srodnim pravima, Zakonom o žigovima, Zakonom o zaštiti podataka o ličnosti, kao i drugim propisima pravnog sistema Republike Srbije u delovima koji nisu regulisani navedenim zakonima.
+<br><br>
+Kompanija je posvećena očuvanju i primeni prava zaštiti podatka o ličnosti koja uživaju fizička lica, kao i autorskih prava, a u svemu prema pravilima informacione struke, dobrim poslovnim običajima i u skladu sa važećim propisima Republike Srbije.
+<br><br>
+Servis nije zamena za profesionalnu konsultantsku uslugu u nabavci ili prodaji vozila, ili bilo druge usluge koje nisu navedene u ovim Uslovima, niti Kompanija pruža ili obezbeđuje bilo kakve druge usluge, osim opisane usluge informacionog društva. Kompanija ni na koji način ne utiče na sadržaj koji postavljaju korisnici (osim uz prethodnu saglasnost korisnika koji je sadržaj postavio) ili koji je nastao agregiranjem javno dostupnih podataka, niti garantuje za tačnost ili upotrebljivost informacija koje su prezentovane kroz dostupan sadržaj. Isključivu odgovornost za sadržaj imaju ona lica koja su sadržaj postavila odnosno od kojih je sadržaj preuzet.
+<br><br>
+Kompanija ima pravo, ali ne i obavezu, da bilo koji sadržaj, u bilo kom trenutku ukloni sa Servisa, bez obaveze bilo kakvog prethodnog ili naknadnog obaveštenja ili obrazloženja.
+<br><br>
+
+<h3>INTEGRITET SERVISA</h3>
+Servis je namenjen oglašavanju novih i polovnih vozila namenjenih prodaji kao što su: putnička vozila, motori, transportna vozila, poljoprivredne mašine, radne mašine, plovila, bicikli, kao i oglašavanju delova i opreme.
+<br><br>
+Tekstovi i drugi unosi koje korisnici ostavljaju na bilo kom delu Servisa (na primer u komentarima i slično) moraju biti tačni, ispravni. Za tačnost i ispravnost unetih podataka, odgovara isključivo korisnik koji je podatak uneo. Tačnost unosa podrazumeva da dolaze iz nekog kompetentnog izvora i/ili ličnog iskustva korisnika. Ispravnost podrazumeva gramatičku i pravopisnu ispravnost.
+<br><br>
+Svako korišćenje Servisa u celosti ili bilo kog njegovog dela koje nije u skladu sa Uslovima korišćenja, smatraće se zloupotrebom usluga koje pruža Kompanija, i kršenjem Uslova korišćenja.
+<br><br>
+Korisnik samostalno bira lozinku prilikom registracije i isključivo je odgovoran za tajnost lozinke i korišćenje Servisa putem pristupnih podataka. Korisnik neće koristiti tuđe pristupne podatke ili davati svoje korisničke podatke trećem licu. Korisnik može obavestiti Kompaniju ukoliko posumnja na neovlašćeno korišćenje svojih pristupnih podataka.
+<br><br>
+Kompanija će u svakoj pojedinačnoj prilici pružiti punu podršku zaštiti prava ličnosti, privatnosti, svojinskih prava i prava intelektualne svojine svim licima nosiocima tih prava, ili onim licima čije je pravo povređeno, tako što će, bez odlaganja:
+<br><br>
+
+na obrazložen zahtev, potkrepljen odgovarajućom dokumentacijom, ukloniti sadržaj tako da ne bude javno dostupan, a sadržaj sačuvati za potrebe dokazivanja,
+nadležnom organu, na zahtev dostaviti, podatke o korisniku čiji unos krši neko od navedenih ili drugih prava, sve u skladu sa propisima Republike Srbije.
+<br><br>
+Kompanija prenosi elektronske poruke koje su joj predate od strane korisnika uslu
+      </div>
+  </div>
+</div>
+  <script src="homepage.js"></script>
   <script src="Bootstrap/jquery-3.4.1.min.js"></script>
   <script src="Bootstrap/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
 </body>
