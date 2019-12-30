@@ -3,44 +3,42 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"></link>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="homepage.css">
   <title>MaxxProdaja</title>
   <link rel="shortcut icon" href="maxShort.png"/>
 </head>
+<i class="fa fa-fw fa-home showhim" style="font-size: 4em; color: #333;"></i>
+<div class="showme">
+  <ul class="navbar">
+    <li class="nav-item-left"> <a href="#"><i class="fa fa-fw fa-home" style="font-size: 4em; color: #333;"></i></a></li>
+    <li class="nav-item-center"> <a href="#"> <img src="maxShort.png" width="75px"></a></li>
+    <li class="nav-item-right"> <a href="#"> 
+      <div class="container" onclick="myFunction(this)">
+      <div class="bar1"></div><br>
+      <div class="bar3"></div><br>
+    </div>
+                              </a></li>
+  </ul>
+</div>
+<div class="barbar">
+<nav class="navbar navbar-center">
+  <ul>
+    <li><a class="nav-link"  ><img src="logokraj.png" href="index.html" height="80px"></a></li>
+    <li><a href="kupujem.html">Kupujem</a></li>
+    <li><a href="#">Prodajem</a></li>
+    <li><a href="#">Menjam</a></li>
+  </ul>
+</nav>
+</div>
 
-<body>
-  <div class="pozadinadiv"> //najveci i glavni div
-    <div id="navbar"> 
-    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist"  style="z-index: 5;">
-      <li class="nav-item navbar-right">
-        <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Home</a>
-      </li>
-      <li class="nav-item navbar-right">
-        <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</a>
-      </li>
-      <li class="nav-item navbar-right">
-        <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</a>
-      </li>
-    </ul>
-  </div>
 
-    <script>
-      var prevScrollpos = window.pageYOffset;
-      window.onscroll = function() {
-      var currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos) {
-          document.getElementById("navbar").style.top = "0";
-        } else {
-          document.getElementById("navbar").style.top = "-50px";
-        }
-        prevScrollpos = currentScrollPos;
-      }
-      </script>
-   
-      <pre class="Centriran">
+
+    <pre class="Centriran">
         USLOVI KORIŠĆENJA
 
 OPŠTE ODREDBE
@@ -113,11 +111,27 @@ Postavljanjem sadržaja na Servis, registrovani korisnik bezuslovno i neopozivo 
 
 Registrovani korisnik može bez bilo kakvog obrazloženja ili obaveštenja, u bilo koje doba ukinuti svoj status registrovanog korisnika podnošenjem zahteva za deaktivaciju svog korisničkog naloga.
       </pre>
-      <div class="container-fluid bg-3 text-center">
+      
+      <script>
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+          if (prevScrollpos > currentScrollPos) {
+            document.getElementById("navbar").style.top = "0";
+          } else {
+            document.getElementById("navbar").style.top = "-50px";
+          }
+          prevScrollpos = currentScrollPos;
+        }
+        </script>
+      <script>
+        function myFunction(x) {
+          x.classList.toggle("change");
+        }
+        </script>
 
       </div>
-    </div>
-  <script src="homepage.js"></script>
+  <script src="homepage1.js"></script>
   <script src="Bootstrap/jquery-3.4.1.min.js"></script>
   <script src="Bootstrap/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
 </body>
