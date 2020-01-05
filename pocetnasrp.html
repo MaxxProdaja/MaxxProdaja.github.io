@@ -39,7 +39,179 @@
   </ul>
 </div>
 <div class="Centriran">
-
+<h1>Dobrodošli</h1>
+<h4>Prodajes nesta malo?Prodaj ga Maxximalno!</h4>
+<h4>Postavi oglas!</h4>
+<p style="margin: 0%;">Odaberite radnju.</p>
+<select class="form-control" style="border-radius: 5%;" id="radnja">
+  <option value="nista">Izaberi..</option>
+  <option id="kupujem">Kupujem</option>
+  <option id="prodajem">Prodajem</option>
+  <option value=""disabled>Menjam</option>
+</select>
+<div style="display: none;" id="kupovina">
+<p style="margin: 0%;">Sta kupujete?</p>
+<select class="form-control">
+  <option value="nista">Izaberi..</option>
+  <option value="laptop">Laptop</option>
+  <option value="telefon">Telefon</option>
+  <option value="auto">Automobil</option>
+  <option value="kucni">Kucni uredjaj</option>
+  <option value="knjiga">Knjigu</option>
+  <option value="namestaj">Namestaj</option>
+  <option value="drugo">Drugo...</option>
+</select>
+</div>
+<div style="display: none;" id="prodaja">
+  <p style="margin: 0%;">Sta prodajete?</p>
+  <select class="form-control" id="prodaja1">
+    <option value="nista">Izaberi..</option>
+    <option id="laptop">Laptop</option>
+    <option id="telefon">Telefon</option>
+    <option id="auto">Automobil</option>
+    <option id="kucni">Kucni uredjaj</option>
+    <option id="knjiga">Knjigu</option>
+    <option id="namestaj">Namestaj</option>
+    <option value="drugo">Drugo...</option>
+  </select>
+  </div>
+  <script type="text/javascript">
+    $(function() {
+        $("#radnja").change(function() {
+            if($("#kupujem").is(":selected")) {
+                $("#kupovina").css({"display":"block"});
+                $("#prodaja").css({"display":"none"});
+                $("#ostalo").css({"display":"block"});
+            }
+            else if($("#prodajem").is(":selected")) {
+                $("#prodaja").css({"display":"block"});
+                $("#kupovina").css({"display":"none"});
+                $("#ostalo").css({"display":"block"});
+            }
+            else{
+              $("#prodaja").css({"display":"none"});
+              $("#kupovina").css({"display":"none"});
+              $("#ostalo").css({"display":"none"});
+            }
+        });
+    });
+    </script>
+    <script>
+    $(function() {
+      $("#prodaja1").change(function() {
+        if($("#laptop").is(":selected"))
+        {
+          $("#laptopovi").css({"display":"block"});
+          $("#telefoni").css({"display":"none"});
+          $("#automobili").css({"display":"none"});
+          $("#uredjaji").css({"display":"none"});
+        }
+        else if($("#telefon").is(":selected"))
+        {
+          $("#laptopovi").css({"display":"none"});
+          $("#telefoni").css({"display":"block"});
+          $("#automobili").css({"display":"none"});
+          $("#uredjaji").css({"display":"none"});
+        }
+        else if($("#auto").is(":selected"))
+        {
+          $("#laptopovi").css({"display":"none"});
+          $("#telefoni").css({"display":"none"});
+          $("#automobili").css({"display":"block"});
+          $("#uredjaji").css({"display":"none"});
+        }
+        else if($("#kucni").is(":selected"))
+        {
+          $("#laptopovi").css({"display":"none"});
+          $("#telefoni").css({"display":"none"});
+          $("#automobili").css({"display":"none"});
+          $("#uredjaji").css({"display":"block"});
+        }
+      })
+      
+    })
+    </script>
+    <div id="laptopovi" style="display: none;">
+      <p>Odaberi marku laptopa</p>
+      <select class="form-control">
+        <option>Izaberi..</option>
+        <option>Msi</option>
+        <option>Samsung</option>
+        <option>Hp</option>
+        <option>Toshiba</option>
+        <option>Asus</option>
+        <option>Dell</option>
+        <option>Drugo...</option>
+      </select></div>
+      <div id="telefoni" style="display: none;">
+        <p>Odaberi marku telefona</p>
+        <select class="form-control">
+          <option>Izaberi..</option>
+          <option>Msi</option>
+          <option>Samsung</option>
+          <option>Hp</option>
+          <option>Toshiba</option>
+          <option>Asus</option>
+          <option>Dell</option>
+          <option>Drugo...</option>
+        </select>
+      </div>
+      <div id="auto" style="display: none;">
+        <p>Odaberi marku automobila</p>
+        <select class="form-control">
+          <option>Izaberi..</option>
+          <option>Msi</option>
+          <option>Samsung</option>
+          <option>Hp</option>
+          <option>Toshiba</option>
+          <option>Asus</option>
+          <option>Dell</option>
+          <option>Drugo...</option>
+        </select>
+      </div>
+      <div id="kucni" style="display: none;">
+        <p>Odaberi marku kucnog urodjaja</p>
+        <select class="form-control">
+          <option>Izaberi..</option>
+          <option>Gorenje</option>
+          <option>Samsung</option>
+          <option>Hp</option>
+          <option>Toshiba</option>
+          <option>Asus</option>
+          <option>Privileg</option>
+          <option>Drugo...</option>
+        </select>
+      </div>
+<div id="ostalo" style="display: none;">
+<p>Unesi naslov oglasa.</p>
+<input class="form-control" type="text">
+<div class="form-group">
+  <label for="opis">Opis Proizvoda:</label>
+  <textarea id="opis1" class="form-control" rows="5" placeholder="Detaljno opisite vas proizvod."></textarea>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text">€</span>
+    </div>
+    <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
+    <div class="input-group-append">
+      <span class="input-group-text">.00</span>
+    </div>
+  </div>
+</div>
+  <p>Fixna Cena?</p>
+  <form>
+    <div class="radio-inline">
+      <label><input type="radio" name="optradio" checked>DA</label>
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="optradio">NE</label>
+    </div>
+    </form>
+    <input style="margin-left:11%;" type="checkbox" class="form-check-input">Zamena moguca? <br>
+    <p>Unesite fotografiju.</p>
+    <input type="file">
+    <h4>Pogledajte i nase ostale oglase.</h4>
+</div>
 </div>
 <div class="footer">
   <div id="button"></div>

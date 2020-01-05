@@ -59,12 +59,6 @@ pre {
     font-size: 16px;
 }
 
-/* .padajuci
-{
-  background-color: rgba(90, 61, 35, 0.836);
-  border-radius: 0px 0px 10px 10px;
-  width: 100%;
-} */
 .showme
 {
   position: fixed;
@@ -126,15 +120,6 @@ pre {
   padding:0;
   text-align:center;
 }
-
-
-
-
-
-
-
-
-
 
 fieldset, label { margin: 0; padding: 0; }
 h1 { font-size: 1.5em; margin: 10px; }
