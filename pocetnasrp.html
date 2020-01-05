@@ -51,20 +51,12 @@
 </select>
 <div style="display: none;" id="kupovina">
 <p style="margin: 0%;">Sta kupujete?</p>
-<select class="form-control">
-  <option value="nista">Izaberi..</option>
-  <option value="laptop">Laptop</option>
-  <option value="telefon">Telefon</option>
-  <option value="auto">Automobil</option>
-  <option value="kucni">Kucni uredjaj</option>
-  <option value="knjiga">Knjigu</option>
-  <option value="namestaj">Namestaj</option>
-  <option value="drugo">Drugo...</option>
-</select>
 </div>
 <div style="display: none;" id="prodaja">
   <p style="margin: 0%;">Sta prodajete?</p>
-  <select class="form-control" id="prodaja1">
+</div>
+<div id="prodaja1" style="display: none;">
+  <select class="form-control">
     <option value="nista">Izaberi..</option>
     <option id="laptop">Laptop</option>
     <option id="telefon">Telefon</option>
@@ -74,19 +66,19 @@
     <option id="namestaj">Namestaj</option>
     <option value="drugo">Drugo...</option>
   </select>
-  </div>
+</div id="prodaja1">
   <script type="text/javascript">
     $(function() {
         $("#radnja").change(function() {
             if($("#kupujem").is(":selected")) {
                 $("#kupovina").css({"display":"block"});
                 $("#prodaja").css({"display":"none"});
-                $("#ostalo").css({"display":"block"});
+                $("#prodaja1").css({"display":"block"});
             }
             else if($("#prodajem").is(":selected")) {
                 $("#prodaja").css({"display":"block"});
                 $("#kupovina").css({"display":"none"});
-                $("#ostalo").css({"display":"block"});
+                $("#prodaja1").css({"display":"block"});
             }
             else{
               $("#prodaja").css({"display":"none"});
@@ -105,6 +97,7 @@
           $("#telefoni").css({"display":"none"});
           $("#automobili").css({"display":"none"});
           $("#uredjaji").css({"display":"none"});
+                $("#ostalo").css({"display":"block"});
         }
         else if($("#telefon").is(":selected"))
         {
@@ -112,6 +105,7 @@
           $("#telefoni").css({"display":"block"});
           $("#automobili").css({"display":"none"});
           $("#uredjaji").css({"display":"none"});
+                $("#ostalo").css({"display":"block"});
         }
         else if($("#auto").is(":selected"))
         {
@@ -119,6 +113,7 @@
           $("#telefoni").css({"display":"none"});
           $("#automobili").css({"display":"block"});
           $("#uredjaji").css({"display":"none"});
+                $("#ostalo").css({"display":"block"});
         }
         else if($("#kucni").is(":selected"))
         {
@@ -126,6 +121,15 @@
           $("#telefoni").css({"display":"none"});
           $("#automobili").css({"display":"none"});
           $("#uredjaji").css({"display":"block"});
+                $("#ostalo").css({"display":"block"});
+        }
+        else if($("#kucni").is(":selected")){
+
+          $("#ostalo").css({"display":"block"});
+        }
+        else if($("#kucni").is(":selected")){
+          
+          $("#ostalo").css({"display":"block"});
         }
       })
       
