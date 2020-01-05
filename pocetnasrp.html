@@ -64,7 +64,7 @@
     <option id="kucni">Kucni uredjaj</option>
     <option id="knjiga">Knjigu</option>
     <option id="namestaj">Namestaj</option>
-    <option value="drugo">Drugo...</option>
+    <option id="drugo">Drugo...</option>
   </select>
 </div id="prodaja1">
   <script type="text/javascript">
@@ -98,6 +98,7 @@
           $("#automobili").css({"display":"none"});
           $("#uredjaji").css({"display":"none"});
                 $("#ostalo").css({"display":"block"});
+                $("#postavi").css({"display":"block"});
         }
         else if($("#telefon").is(":selected"))
         {
@@ -106,6 +107,7 @@
           $("#automobili").css({"display":"none"});
           $("#uredjaji").css({"display":"none"});
                 $("#ostalo").css({"display":"block"});
+                $("#postavi").css({"display":"block"});
         }
         else if($("#auto").is(":selected"))
         {
@@ -114,6 +116,7 @@
           $("#automobili").css({"display":"block"});
           $("#uredjaji").css({"display":"none"});
                 $("#ostalo").css({"display":"block"});
+                $("#postavi").css({"display":"block"});
         }
         else if($("#kucni").is(":selected"))
         {
@@ -122,14 +125,22 @@
           $("#automobili").css({"display":"none"});
           $("#uredjaji").css({"display":"block"});
                 $("#ostalo").css({"display":"block"});
+                $("#postavi").css({"display":"block"});
         }
-        else if($("#kucni").is(":selected")){
+        else if($("#knjiga").is(":selected")){
 
           $("#ostalo").css({"display":"block"});
+          $("#postavi").css({"display":"block"});
         }
-        else if($("#kucni").is(":selected")){
+        else if($("#namestaj").is(":selected")){
           
           $("#ostalo").css({"display":"block"});
+          $("#postavi").css({"display":"block"});
+        }
+        else if($("#drugo").is(":selected")){
+          
+          $("#ostalo").css({"display":"block"});
+          $("#postavi").css({"display":"block"});
         }
       })
       
@@ -160,20 +171,21 @@
           <option>Drugo...</option>
         </select>
       </div>
-      <div id="auto" style="display: none;">
+      <div id="automobili" style="display: none;">
         <p>Odaberi marku automobila</p>
         <select class="form-control">
           <option>Izaberi..</option>
-          <option>Msi</option>
-          <option>Samsung</option>
-          <option>Hp</option>
-          <option>Toshiba</option>
-          <option>Asus</option>
-          <option>Dell</option>
+          <option>Audi</option>
+          <option>Wolfvagen</option>
+          <option>Tesla</option>
+          <option>Toyota</option>
+          <option>Suzuki</option>
+          <option>Fiat</option>
+          <option>Peugeot</option>
           <option>Drugo...</option>
         </select>
       </div>
-      <div id="kucni" style="display: none;">
+      <div id="uredjaji" style="display: none;">
         <p>Odaberi marku kucnog urodjaja</p>
         <select class="form-control">
           <option>Izaberi..</option>
@@ -213,7 +225,8 @@
     </form>
     <input style="margin-left:11%;" type="checkbox" class="form-check-input">Zamena moguca? <br>
     <p>Unesite fotografiju.</p>
-    <input type="file">
+    <input type="file" class="btn btn-secondary">
+    <button class="btn btn-secondary" id="postavi" style="display: none; border-radius: 5%;">Postavi oglas</button>
     <h4>Pogledajte i nase ostale oglase.</h4>
 </div>
 </div>

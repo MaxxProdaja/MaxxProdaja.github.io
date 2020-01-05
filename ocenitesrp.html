@@ -39,8 +39,129 @@
   </ul>
 </div>
 <div class="Centriran">
+  <div >
+    <fieldset class="rating" style="padding-right: 37%;">
+      <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="ODLICNO - 5 zvezdica"></label>
+      <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Dobro je - 4 zvezdece"></label>
+      <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Nije lose - 3 zvezdice"></label>
+      <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Mora bolje - 2 zvezdice"></label>
+      <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="LOSE! - 1 zvezdicu"></label>
+  </fieldset>
+  </div>
+  <br>
 
+<div class="row">
+  <div class="side"><div>5 star</div></div>
+  <div class="middle"><div class="bar-container"><div class="bar-5"></div></div></div>
+  <div class="side right"><div id="star55">150</div><div id="star55+" style="display: none;">151</div></div>
+  <div class="side"><div>4 star</div></div>
+  <div class="middle"><div class="bar-container"><div class="bar-4"></div></div></div>
+  <div class="side right"><div id="star44">63</div><div id="star44+" style="display: none;">64</div></div>
+  <div class="side"><div>3 star</div></div>
+  <div class="middle"><div class="bar-container"><div class="bar-3"></div></div></div>
+  <div class="side right"><div id="star33">15</div><div id="star33+" style="display: none;">16</div></div>
+  <div class="side"><div>2 star</div></div>
+  <div class="middle"><div class="bar-container"><div class="bar-2"></div></div></div>
+  <div class="side right"><div id="star22">6</div><div id="star22+" style="display: none;">7</div></div>
+  <div class="side"><div>1 star</div></div>
+  <div class="middle"><div class="bar-container"><div class="bar-1"></div></div></div>
+  <div class="side right"><div id="star11">20</div><div id="star11+" style="display: none;">21</div></div>
 </div>
+<h1 id="5zvezdica" style="display: none;">DRAGO NAM JE DA CUJEMO DA VAM JE SE STRANICA ODLICNO SVIDELA. HVALA!</h1>
+<h2 id="4zvezdica" style="display: none;">DRAGO NAM JE DA CUJEMO DA VAM JE SE STRANICA VRLO DOBRO SVIDELA. HVALA!</h2>
+<h3 id="3zvezdica" style="display: none;"> Cenimo svacije misljenje. HVALA!</h3>
+<h3 id="2zvezdica" style="display: none;">Pokusacemo da popravimo stranicu. HVALA!</h3>
+<h3 id="1zvezdica" style="display: none;">Cenimo i misljenje vas nebitnih. HVALA!</h3>
+
+<script type="text/javascript">
+ $('#star5').click(function() {  
+    $("#star55").css({"display":"none"});
+    $("#star44").css({"display":"block"});
+    $("#star33").css({"display":"block"});
+    $("#star22").css({"display":"block"});
+    $("#star11").css({"display":"block"});
+    $("#star55+").css({"display":"block"});
+    $("#star44+").css({"display":"none"});
+    $("#star33+").css({"display":"none"});
+    $("#star22+").css({"display":"none"});
+    $("#star11+").css({"display":"none"});
+    $("#5zvezdica").css({"display":"block"});
+    $("#4zvezdica").css({"display":"none"});
+    $("#3zvezdica").css({"display":"none"});
+    $("#2zvezdica").css({"display":"none"});
+    $("#1zvezdica").css({"display":"none"});
+});
+$('#star4').click(function() {  
+    $("#star55").css({"display":"block"});
+    $("#star44").css({"display":"none"});
+    $("#star33").css({"display":"block"});
+    $("#star22").css({"display":"block"});
+    $("#star11").css({"display":"block"});
+    $("#star55+").css({"display":"none"});
+    $("#star44+").css({"display":"block"});
+    $("#star33+").css({"display":"none"});
+    $("#star22+").css({"display":"none"});
+    $("#star11+").css({"display":"none"});
+    $("#4zvezdica").css({"display":"block"});
+    $("#5zvezdica").css({"display":"none"});
+    $("#3zvezdica").css({"display":"none"});
+    $("#2zvezdica").css({"display":"none"});
+    $("#1zvezdica").css({"display":"none"});
+});
+$('#star3').click(function() {  
+    $("#star55").css({"display":"block"});
+    $("#star44").css({"display":"block"});
+    $("#star33").css({"display":"none"});
+    $("#star22").css({"display":"block"});
+    $("#star11").css({"display":"block"});
+    $("#star55+").css({"display":"none"});
+    $("#star44+").css({"display":"none"});
+    $("#star22+").css({"display":"none"});
+    $("#star11+").css({"display":"none"});
+    $("#star33+").css({"display":"block"});
+    $("#3zvezdica").css({"display":"block"});
+    $("#4zvezdica").css({"display":"none"});
+    $("#5zvezdica").css({"display":"none"});
+    $("#2zvezdica").css({"display":"none"});
+    $("#1zvezdica").css({"display":"none"});
+});
+$('#star2').click(function() {  
+    $("#star55").css({"display":"block"});
+    $("#star44").css({"display":"block"});
+    $("#star33").css({"display":"block"});
+    $("#star22").css({"display":"none"});
+    $("#star11").css({"display":"block"});
+    $("#star55+").css({"display":"none"});
+    $("#star44+").css({"display":"none"});
+    $("#star33+").css({"display":"none"});
+    $("#star11+").css({"display":"none"});
+    $("#star22+").css({"display":"block"});
+    $("#2zvezdica").css({"display":"block"});
+    $("#4zvezdica").css({"display":"none"});
+    $("#3zvezdica").css({"display":"none"});
+    $("#5zvezdica").css({"display":"none"});
+    $("#1zvezdica").css({"display":"none"});
+});
+$('#star1').click(function() {  
+    $("#star55").css({"display":"block"});
+    $("#star44").css({"display":"block"});
+    $("#star33").css({"display":"block"});
+    $("#star22").css({"display":"block"});
+    $("#star11").css({"display":"none"});
+    $("#star55+").css({"display":"none"});
+    $("#star44+").css({"display":"none"});
+    $("#star33+").css({"display":"none"});
+    $("#star22+").css({"display":"none"});
+    $("#star11+").css({"display":"block"});
+    $("#1zvezdica").css({"display":"block"});
+    $("#4zvezdica").css({"display":"none"});
+    $("#3zvezdica").css({"display":"none"});
+    $("#2zvezdica").css({"display":"none"});
+    $("#5zvezdica").css({"display":"none"});
+});
+  </script>
+</div>
+
 <div class="footer">
   <div id="button"></div>
 <div id="container">
