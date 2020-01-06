@@ -31,22 +31,78 @@
 </div>
 <div class="navigacija" style="text-align: center;">
   <a href="#"><img src="logokraj.png" height="50%" style="padding-top: 1%;"></a>
-  <ul class="nav" style="padding-left: 20%;">
-      <li style="padding: 0% 7% 0% 7%;"><a href="pocetnasrp.html" style="text-align: center;"><b>POČETNA</b></a></li>
-      <li style="padding: 0% 7% 0% 7%;"><a href="kupujemsrp.html"><b>KUPUJEM</b></a></li>
-      <li style="padding: 0% 7% 0% 7%;"><a href="prodajemsrp.html"><b>PRODAJEM</b></a></li>
-      <li style="padding: 0% 6% 0% 6%;"><a href="menjamsrp.html"><b>MENJAM</b></a></li>
-  </ul>
+  <ul class="nav" style="padding-left: 22%;">
+    <li style="padding: 0% 9% 0% 9%;"><a href="pocetnasrp.html" style="text-align: center;"><b>POČETNA</b></a></li>
+    <li style="padding: 0% 9% 0% 9%;"><a href="kupujemsrp.html"><b>KUPUJEM</b></a></li>
+    <li style="padding: 0% 9% 0% 9%;"><a href="prodajemsrp.html"><b>PRODAJEM</b></a></li>
+</ul>
 </div>
 <div class="Centriran">
+  <div class="signup-form" id="napravi">
+    <form action="/examples/actions/confirmation.php" method="post">
+		<h2>Napravi nalog</h2>
+		<p class="hint-text">Napravite vas nalog. Besplatno je i traje samo minuta.</p>
+        <div class="form-group">
+        <div class="col-xs-6"><input type="text" class="form-control" name="first_name" placeholder="Ime" required="required"></div>
+        </div>
+        <div class="form-group">
+				<div class="col-xs-6"><input type="text" class="form-control" name="last_name" placeholder="Prezime" required="required"></div>     	
+        </div>
+        <div class="form-group">
+        	<input type="email" class="form-control" name="email" placeholder="Email" required="required">
+        </div>
+		<div class="form-group">
+            <input type="password" class="form-control" name="password" placeholder="Sifra" required="required">
+        </div>
+		<div class="form-group">
+            <input type="password" class="form-control" name="confirm_password" placeholder="Potvrdi sifru" required="required">
+        </div>        
+        <div class="form-group">
+			<label class="checkbox-inline"><input type="checkbox" required="required">Prihvatam <a href="index.html">Uslove koricenja</a></label>
+		</div>
+		<div class="form-group">
+            <button type="submit" class="btn btn-dark btn-lg btn-block">Prijavi se</button>
+        </div>
+    </form>
+	<div class="text-center" id="ulogujse">Vec imate nalog? <a href="#" style="color: tomato;"> Uloguj se.</a></div>
+</div>
 
+<script type="text/javascript">
+  $('#ulogujse').click(function() {  
+     $("#napravi").css({"display":"none"});
+     $("#napravljen").css({"display":"block"});
+  });
+  $('#napravinalog').click(function() {  
+     $("#napravi").css({"display":"block"});
+     $("#napravljen").css({"display":"none"});
+  });
+</script>
+<div class="signup-form" id="napravljen" style="display: none;">
+  <form action="/examples/actions/confirmation.php" method="post">
+  <h2>Ulogujte se</h2>
+  <p class="hint-text">Prijavite se na vas nalog.</p>
+      <div class="form-group">
+        <input type="email" class="form-control" name="email" placeholder="Email" required="required">
+      </div>
+  <div class="form-group">
+          <input type="password" class="form-control" name="password" placeholder="Sifra" required="required">
+      </div>        
+      <div class="form-group">
+    <label class="checkbox-inline"><input type="checkbox">Ostavi me prijavljenog.</label>
+  </div>
+  <div class="form-group">
+          <button type="submit" class="btn btn-dark btn-lg btn-block">Prijavi se</button>
+      </div>
+  </form>
+<div class="text-center" id="napravinalog">Nemate nalog? <a href="#" style="color: tomato;"> Napravi nalog.</a></div>
+</div>
 </div>
 <div class="footer">
   <div id="button"></div>
 <div id="container">
 <div id="cont">
 <div class="footer_center">
-       <pre><h3><a href="kontaktsrp.html"><i class="fa fa-address-book-o" style="font-size:26px"> </i>KONTAKTIRAJTE NAS  </a>  <a href="infosrp.html"><i class="fa fa-info" style="font-size:26px"> </i>INFO</a>    <a href="ocenitesrp.html"><i class="fa fa-star-o" style="font-size:26px"> </i>OCENITE NAS</a></h3></pre>
+       <pre><h3><a href="kontaktsrp.html"><i class="fa fa-address-book-o" style="font-size:26px"> </i>KONTAKTIRAJTE NAS  </a>  <a href="index.html"><i class="fa fa-info" style="font-size:26px"> </i>INFO</a>    <a href="ocenitesrp.html"><i class="fa fa-star-o" style="font-size:26px"> </i>OCENITE NAS</a></h3></pre>
 </div>
 </div>
 </div>
