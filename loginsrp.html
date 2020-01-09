@@ -61,42 +61,42 @@
 			<label class="checkbox-inline"><input type="checkbox" required="required">Prihvatam <a href="index.html">Uslove koricenja</a></label>
 		</div>
 		<div class="form-group">
-            <button type="submit" class="btn btn-dark btn-lg btn-block">Prijavi se</button>
+            <button class="btn btn-dark btn-lg btn-block">Prijavi se</button>
         </div>
     </form>
-	<div class="text-center" id="ulogujse">Vec imate nalog? <a href="#" style="color: tomato;"> Uloguj se.</a></div>
-</div>
+  <div class="text-center" id="ulogujse">Vec imate nalog? <a href="#" style="color: tomato;"> Uloguj se.</a></div>
 
+</div>
+  <div class="signup-form" id="napravljen" style="display: none;">
+    <form action="/examples/actions/confirmation.php" method="post">
+    <h2>Ulogujte se</h2>
+    <p class="hint-text">Prijavite se na vas nalog.</p>
+        <div class="form-group">
+          <input type="email" class="form-control" name="email" placeholder="Email" required="required">
+        </div>
+    <div class="form-group">
+            <input type="password" class="form-control" name="password" placeholder="Sifra" required="required">
+        </div>        
+        <div class="form-group">
+      <label class="checkbox-inline"><input type="checkbox">Ostavi me prijavljenog.</label>
+    </div>
+    <div class="form-group">
+            <button class="btn btn-dark btn-lg btn-block">Prijavi se</button>
+        </div>
+    </form>
+  <div class="text-center" id="napravii">Nemate nalog? <a href="#" style="color: tomato;"> Napravi nalog.</a></div>
+  </div>
 <script type="text/javascript">
+  $('#napravii').click(function() {  
+     $("#napravi").css({"display":"block"});
+     $("#napravljen").css({"display":"none"});
+  });
   $('#ulogujse').click(function() {  
      $("#napravi").css({"display":"none"});
      $("#napravljen").css({"display":"block"});
   });
-  $('#napravinalog').click(function() {  
-     $("#napravi").css({"display":"block"});
-     $("#napravljen").css({"display":"none"});
-  });
 </script>
-<div class="signup-form" id="napravljen" style="display: none;">
-  <form action="/examples/actions/confirmation.php" method="post">
-  <h2>Ulogujte se</h2>
-  <p class="hint-text">Prijavite se na vas nalog.</p>
-      <div class="form-group">
-        <input type="email" class="form-control" name="email" placeholder="Email" required="required">
-      </div>
-  <div class="form-group">
-          <input type="password" class="form-control" name="password" placeholder="Sifra" required="required">
-      </div>        
-      <div class="form-group">
-    <label class="checkbox-inline"><input type="checkbox">Ostavi me prijavljenog.</label>
-  </div>
-  <div class="form-group">
-          <button type="submit" class="btn btn-dark btn-lg btn-block">Prijavi se</button>
-      </div>
-  </form>
-<div class="text-center" id="napravinalog">Nemate nalog? <a href="#" style="color: tomato;"> Napravi nalog.</a></div>
-</div>
-</div>
+
 <div class="footer">
   <div id="button"></div>
 <div id="container">

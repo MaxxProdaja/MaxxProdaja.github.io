@@ -241,10 +241,31 @@ a{
 }
 
 button{text-align:center;}
+.card-horizontal {
+  display: flex;
+  flex: 1 1 auto;
+}
 
+.filter
+{
+margin-left: 3%;
+margin-top: 2%;
+position: absolute;
+}
+.filteropcije
+{
+  width: 100%;
+  height: auto;
+  background-color: rgb(245, 245, 245);
+  margin-top: 0%;
+  position: absolute;
+}
 
-
-
+.oglas
+{
+  height: 180px;
+  width: 300px;
+}
 
 
 .heading {

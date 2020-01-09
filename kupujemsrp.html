@@ -37,8 +37,152 @@
     <li style="padding: 0% 9% 0% 9%;"><a href="prodajemsrp.html"><b>PRODAJEM</b></a></li>
 </ul>
 </div>
+<script>
+function promeni(obj)
+        {
+            let lbl = document.getElementById("rez");
+            rez.innerHTML =obj.value +  "€";
+        }
+function promeni1(obj)
+        {
+            let lbl = document.getElementById("rez1");
+            rez1.innerHTML =obj.value +  "€";
+        }
+      </script>
 <div class="Centriran">
+  <div class="filter showhim"><i class="fa fa-filter" aria-hidden="true">Filtriraj</i></div>
+  <div class="filteropcije showme"><pre>Sta prodajete?
+    <select class="form-control">
+      <option value="nista">Izaberi..</option>
+      <option id="laptop">Laptop</option>
+      <option id="telefon">Telefon</option>
+      <option id="auto">Automobil</option>
+      <option id="kucni">Kucni uredjaj</option>
+      <option id="knjiga">Knjigu</option>
+      <option id="namestaj">Namestaj</option>
+      <option id="drugo">Drugo...</option>
+    </select>
+    Odaberi Minimalnu cenu.<input type="range" min="1" max="999" value="1" onmousemove="promeni(this)"><label id="rez">1€</label>
+    Odaberi Maximalnu cenu.<input type="range" min="1" max="999" value="1" onmousemove="promeni1(this)"><label id="rez1">1€</label>
+  </pre></div>
+  <div class="container-fluid" style="padding-top: 5%;">
+    <div class="row"> <div class="col-12 mt-3"> <div class="card"><div class="card-horizontal"> <div class="img-square-wrapper">
+    <img class="oglas" src="oglas0.jpg" alt="Card image cap">
+                      </div>
+                      <div class="card-body">
+                          <h4 class="card-title">Otkup Iphone telefona</h4>
+                          <p class="card-text">Kupujem iPhone 6, iPhone 6 Plus, iPhone 7, iPhone 7 Plus, iPhone 8, iPhone 8 Plus, iPhone X, XS, XS Max, 11, 11pro sa polupanim/razlupanim/ostecenim displejom ali sa ispravnom plocom, stanje nebitno, bitno je samo da ploca radi i da je 100% ispravna, oprema pozeljna. . . </p>
+        </div></div>
+        <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small> <p style="float: right;"><b>Cena:Dogovor</b></p>
+       </div></div></div></div></div>
 
+       <div class="container-fluid">
+        <div class="row"> <div class="col-12 mt-3"> <div class="card"><div class="card-horizontal"> <div class="img-square-wrapper">
+        <img class="oglas" src="oglas1.jpg" alt="Card image cap">
+                          </div>
+                          <div class="card-body">
+                              <h4 class="card-title">Kupujem laptop</h4>
+                              <p class="card-text">Savrseno ocuvan, baterija ispravna, bez garancije.
+
+                                Specifikacije:
+                                
+                                    CPU - Intel® Core™ i7-3630QM CPU @ 2.40GHz
+                                    OS - Windows 10
+                                    Chpset - Intel® HM76
+                                    Memory - DDR3 1333/1600MHz, 2 slots, Max. 8GB
+                                    Display- 15.6" Full HD (1920x1080), Anti-glare
+                                    GPU - NVIDIA GeForce GTX 660M (2GB GDDR5)
+                                    Integrated GPU - Intel(R) HD Graphics 4000
+                                    Storage - 750GB SATA 7200/5400 rpm</p>
+            </div></div>
+            <div class="card-footer">
+          <small class="text-muted">Postavljeno pre 1 dan</small> <p style="float: right;"><b>Cena:700</b></p>
+           </div></div></div></div></div>
+
+           <div class="container-fluid">
+            <div class="row"> <div class="col-12 mt-3"> <div class="card"><div class="card-horizontal"> <div class="img-square-wrapper">
+            <img class="oglas" src="oglas2.jpg" alt="Card image cap">
+                              </div>
+                              <div class="card-body">
+                                  <h4 class="card-title">Kupujem Automobil toyota rav4</h4>
+                                  <p class="card-text">Kupujem automobil sa slike.Ponude i cene posaljite na broj:0655620376. Placam u kesu ili na lizing(po dogovoru). Maksimalna cena 5000e</p>
+                </div></div>
+                <div class="card-footer">
+              <small class="text-muted">Postavljeno pre 1 dan.</small><p style="float: right;"><b>Cena:5000</b></p>
+               </div></div></div></div></div>
+
+               <div class="container-fluid">
+                <div class="row"> <div class="col-12 mt-3"> <div class="card"><div class="card-horizontal"> <div class="img-square-wrapper">
+                <img class="oglas" src="oglas3.jpg" alt="Card image cap">
+                                  </div>
+                                  <div class="card-body">
+                                      <h4 class="card-title">Kupujem Espresso masinu</h4>
+                                      <p class="card-text">Kupujem espreso masinu po mogucnosti sa garantnim listom i probom na licu mesta.</p>
+                    </div></div>
+                    <div class="card-footer">
+                  <small class="text-muted">Postavljeno pre 1 dan.</small><p style="float: right;"><b>Cena:50</b></p>
+                   </div></div></div></div></div>
+
+                   <div class="container-fluid">
+                    <div class="row"> <div class="col-12 mt-3"> <div class="card"><div class="card-horizontal"> <div class="img-square-wrapper">
+                    <img class="oglas" src="oglas4.jpg" alt="Card image cap">
+                                      </div>
+                                      <div class="card-body">
+                                          <h4 class="card-title">Barske stolice</h4>
+                                          <p class="card-text">Kupujem luksuzne barske stolice u okolini Novog Sada. Licno preuzimanje. Cena nije bitna samo trazim vrhunski kvalitet i dizajn...</p>
+                        </div></div>
+                        <div class="card-footer">
+                      <small class="text-muted">Postavljeno pre 2 dan.</small><p style="float: right;"><b>Cena:Dogovor</b></p>
+                       </div></div></div></div></div>
+
+                       <div class="container-fluid">
+                        <div class="row"> <div class="col-12 mt-3"> <div class="card"><div class="card-horizontal"> <div class="img-square-wrapper">
+                        <img class="oglas" src="oglas5.jpg" alt="Card image cap">
+                                          </div>
+                                          <div class="card-body">
+                                              <h4 class="card-title">Alienware laptop</h4>
+                                              <p class="card-text">Kupujem alienware gaming laptop sa minimum 32gb rama, i 6gb grafickom. Samo licno preuzimanje i provera na licu mesta. placam to 1200e</p>
+                            </div></div>
+                            <div class="card-footer">
+                          <small class="text-muted">Postavljeno pre 2 dan.</small><p style="float: right;"><b>Cena:1200</b></p>
+                           </div></div></div></div></div>
+
+                           <div class="container-fluid">
+                            <div class="row"> <div class="col-12 mt-3"> <div class="card"><div class="card-horizontal"> <div class="img-square-wrapper">
+                            <img class="oglas" src="oglas6.jpg" alt="Card image cap">
+                                              </div>
+                                              <div class="card-body">
+                                                  <h4 class="card-title">Kucni ljubimac</h4>
+                                                  <p class="card-text">Kupujem kucnog ljubimca sa zavedenim dokumentima i pasosom.Prioritet imaju manji kucni ljubimci (ptica, hrcak i td...). Kupuem iskljucivo mladuncad ne starija od 2 meseca.</p>
+                                </div></div>
+                                <div class="card-footer">
+                              <small class="text-muted">Postavljeno pre 2 dan.</small><p style="float: right;"><b>Cena:Dogovor</b></p>
+                               </div></div></div></div></div>
+
+                               <div class="container-fluid">
+                                <div class="row"> <div class="col-12 mt-3"> <div class="card"><div class="card-horizontal"> <div class="img-square-wrapper">
+                                <img class="" src="http://via.placeholder.com/300x180" alt="Card image cap">
+                                                  </div>
+                                                  <div class="card-body">
+                                                      <h4 class="card-title">Card title</h4>
+                                                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    </div></div>
+                                    <div class="card-footer">
+                                  <small class="text-muted">Last updated 3 mins ago</small>
+                                   </div></div></div></div></div>
+
+                                   <div class="container-fluid">
+                                    <div class="row"> <div class="col-12 mt-3"> <div class="card"><div class="card-horizontal"> <div class="img-square-wrapper">
+                                    <img class="" src="http://via.placeholder.com/300x180" alt="Card image cap">
+                                                      </div>
+                                                      <div class="card-body">
+                                                          <h4 class="card-title">Card title</h4>
+                                                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        </div></div>
+                                        <div class="card-footer">
+                                      <small class="text-muted">Last updated 3 mins ago</small>
+                                       </div></div></div></div></div>
 </div>
 <div class="footer">
   <div id="button"></div>
