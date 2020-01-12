@@ -37,14 +37,8 @@
     <li style="padding: 0% 9% 0% 9%;"><a href="prodajemsrp.html"><b>PRODAJEM</b></a></li>
 </ul>
 </div>
-<script>
-function promeni1(obj)
-        {
-            let lbl = document.getElementById("rez1");
-            rez1.innerHTML =obj.value +  "€";
-        }
-      </script>
-<div class="Centriran">
+
+<div class="Centriran" >
   <div class="filter showhim"><i class="fa fa-filter" aria-hidden="true">Filtriraj</i></div>
   <div class="filteropcije showme"><pre>Sta prodajete?
     <select class="form-control" id="prodaja1">
@@ -57,7 +51,8 @@ function promeni1(obj)
       <option id="namestaj">Namestaj</option>
       <option id="drugo">Drugo...</option>
     </select>
-    Odaberi Maximalnu cenu.<input id="cena" type="range" min="1" max="999" value="1" onmousemove="promeni1(this)"><label id="rez1">1€</label>
+    <label>Odaberi maximalnu cenu.</label><label id="rez1"></label>
+    <input id="cena" type="range" class="form-control-range" onmousemove="promeni1(this)">
   </pre></div>
   <div class="container-fluid" style="padding-top: 5%;" id="oglas0">
     <div class="row"> <div class="col-12 mt-3"> <div class="card"><div class="card-horizontal"> <div class="img-square-wrapper">
@@ -68,7 +63,7 @@ function promeni1(obj)
                           <p class="card-text">Kupujem iPhone 6, iPhone 6 Plus, iPhone 7, iPhone 7 Plus, iPhone 8, iPhone 8 Plus, iPhone X, XS, XS Max, 11, 11pro sa polupanim/razlupanim/ostecenim displejom ali sa ispravnom plocom, stanje nebitno, bitno je samo da ploca radi i da je 100% ispravna, oprema pozeljna. . . </p>
         </div></div>
         <div class="card-footer">
-      <small class="text-muted">Postavljeno pre 5 sati.</small> <p style="float: right;"><b>Cena:Dogovor</b></p>
+      <small class="text-muted">Postavljeno pre 5 sati.</small> <p id="cena1" style="float: right;"><b>Cena:499€</b></p>
        </div></div></div></div></div>
 
        <div class="container-fluid" id="oglas1">
@@ -91,7 +86,7 @@ function promeni1(obj)
                                     Storage - 750GB SATA 7200/5400 rpm</p>
             </div></div>
             <div class="card-footer">
-          <small class="text-muted">Postavljeno pre 1 dan</small> <p style="float: right;"><b>Cena:700</b></p>
+          <small class="text-muted">Postavljeno pre 1 dan</small> <p id="cena2" style="float: right;"><b>Cena:700€</b></p>
            </div></div></div></div></div>
 
            <div class="container-fluid" id="oglas2">
@@ -103,7 +98,7 @@ function promeni1(obj)
                                   <p class="card-text">Kupujem automobil sa slike.Ponude i cene posaljite na broj:0655620376. Placam u kesu ili na lizing(po dogovoru). Maksimalna cena 5000e</p>
                 </div></div>
                 <div class="card-footer">
-              <small class="text-muted">Postavljeno pre 1 dan.</small><p style="float: right;"><b>Cena:5000</b></p>
+              <small class="text-muted">Postavljeno pre 1 dan.</small><p id="cena3" style="float: right;"><b>Cena:5000€</b></p>
                </div></div></div></div></div>
 
                <div class="container-fluid" id="oglas3">
@@ -115,7 +110,7 @@ function promeni1(obj)
                                       <p class="card-text">Kupujem espreso masinu po mogucnosti sa garantnim listom i probom na licu mesta.</p>
                     </div></div>
                     <div class="card-footer">
-                  <small class="text-muted">Postavljeno pre 1 dan.</small><p style="float: right;"><b>Cena:50</b></p>
+                  <small class="text-muted">Postavljeno pre 1 dan.</small><p id="cena4" style="float: right;"><b>Cena:50€</b></p>
                    </div></div></div></div></div>
 
                    <div class="container-fluid" id="oglas4">
@@ -127,7 +122,7 @@ function promeni1(obj)
                                           <p class="card-text">Kupujem luksuzne barske stolice u okolini Novog Sada. Licno preuzimanje. Cena nije bitna samo trazim vrhunski kvalitet i dizajn...</p>
                         </div></div>
                         <div class="card-footer">
-                      <small class="text-muted">Postavljeno pre 2 dan.</small><p style="float: right;"><b>Cena:Dogovor</b></p>
+                      <small class="text-muted">Postavljeno pre 2 dan.</small><p id="cena5" style="float: right;"><b>Cena:30€</b></p>
                        </div></div></div></div></div>
 
                        <div class="container-fluid" id="oglas5">
@@ -139,22 +134,26 @@ function promeni1(obj)
                                               <p class="card-text">Kupujem alienware gaming laptop sa minimum 32gb rama, i 6gb grafickom. Samo licno preuzimanje i provera na licu mesta. placam to 1200e</p>
                             </div></div>
                             <div class="card-footer">
-                          <small class="text-muted">Postavljeno pre 2 dan.</small><p style="float: right;"><b>Cena:1200</b></p>
+                          <small class="text-muted">Postavljeno pre 2 dan.</small><p id="cena6" style="float: right;"><b>Cena:1200€</b></p>
                            </div></div></div></div></div>
 
                            <div class="container-fluid" id="oglas6">
+      
                             <div class="row"> <div class="col-12 mt-3"> <div class="card"><div class="card-horizontal"> <div class="img-square-wrapper">
                             <img class="oglas" src="oglas6.jpg" alt="Card image cap">
                                               </div>
                                               <div class="card-body">
                                                   <h4 class="card-title">Kucni ljubimac</h4>
                                                   <p class="card-text">Kupujem kucnog ljubimca sa zavedenim dokumentima i pasosom.Prioritet imaju manji kucni ljubimci (ptica, hrcak i td...). Kupuem iskljucivo mladuncad ne starija od 2 meseca.</p>
+      
                                 </div></div>
                                 <div class="card-footer">
-                              <small class="text-muted">Postavljeno pre 2 dan.</small><p style="float: right;"><b>Cena:Dogovor</b></p>
-                               </div></div></div></div></div>
+                              <small class="text-muted">Postavljeno pre 2 dan.</small><p id="cena7" style="float: right;"><b>Cena:50€</b></p>
+                               </div></div></div></div>
+                              </div>
 
                                <div class="container-fluid" id="oglas7">
+      
                                 <div class="row"> <div class="col-12 mt-3"> <div class="card"><div class="card-horizontal"> <div class="img-square-wrapper">
                                 <img class="oglas" src="oglas7.jpg" alt="Card image cap">
                                                   </div>
@@ -163,114 +162,12 @@ function promeni1(obj)
                                                       <p class="card-text">Vrsimo otkup skolskih udzbenika svih generacija. Cena zavisi od kvaliteta.</p>
                                     </div></div>
                                     <div class="card-footer">
-                                  <small class="text-muted">Postavljeno pre 6 dan.</small><p style="float: right;"><b>Cena:Dogovor</b></p>
+                                  <small class="text-muted">Postavljeno pre 6 dan.</small><p id="cena8" style="float: right;"><b>Cena:10€</b></p>
                                    </div></div></div></div></div>
+                                   <div id="nemaoglasa" style="display: none; padding: 20%;"><h1>NAZALOST NEMA TAKVIH OGLASA</h1></div>
 
 </div>
-<script>
-  let cena1 = document.getElementById('cena');
-  $(function() {
-    $("#prodaja1").change(function() {
-      if($("#laptop").is(":selected"))
-      {
-        $("#oglas0").css({"display":"none"});
-        $("#oglas1").css({"display":"block"});
-        $("#oglas1").css({"padding-top":"5%"});
-        $("#oglas2").css({"display":"none"});
-        $("#oglas3").css({"display":"none"});
-        $("#oglas4").css({"display":"none"});
-        $("#oglas5").css({"display":"block"});
-        $("#oglas6").css({"display":"none"});
-        $("#oglas7").css({"display":"none"});
-       }
-      else if($("#telefon").is(":selected"))
-      {
-          if(cena.value < 500)
-          {
-            console.log(cena.value);
-        $("#oglas0").css({"display":"block"});
-        $("#oglas0").css({"padding-top":"5%"});
-        $("#oglas1").css({"display":"none"});
-        $("#oglas2").css({"display":"none"});
-        $("#oglas3").css({"display":"none"});
-        $("#oglas4").css({"display":"none"});
-        $("#oglas5").css({"display":"none"});
-        $("#oglas6").css({"display":"none"});
-        $("#oglas7").css({"display":"none"});
-      }
-      else
-      {
-        $("#oglas0").css({"display":"none"});
-        $("#oglas0").css({"padding-top":"5%"});
-        $("#oglas1").css({"display":"none"});
-        $("#oglas2").css({"display":"none"});
-        $("#oglas3").css({"display":"none"});
-        $("#oglas4").css({"display":"none"});
-        $("#oglas5").css({"display":"none"});
-        $("#oglas6").css({"display":"none"});
-        $("#oglas7").css({"display":"none"});  
-      }}
-      else if($("#auto").is(":selected"))
-      {
-        $("#oglas0").css({"display":"none"});
-        $("#oglas2").css({"padding-top":"5%"});
-        $("#oglas1").css({"display":"none"});
-        $("#oglas2").css({"display":"block"});
-        $("#oglas3").css({"display":"none"});
-        $("#oglas4").css({"display":"none"});
-        $("#oglas5").css({"display":"none"});
-        $("#oglas6").css({"display":"none"});
-        $("#oglas7").css({"display":"none"});
-      }
-      else if($("#kucni").is(":selected"))
-      {
-        $("#oglas0").css({"display":"none"});
-        $("#oglas3").css({"padding-top":"5%"});
-        $("#oglas1").css({"display":"none"});
-        $("#oglas2").css({"display":"none"});
-        $("#oglas3").css({"display":"block"});
-        $("#oglas4").css({"display":"none"});
-        $("#oglas5").css({"display":"none"});
-        $("#oglas6").css({"display":"none"});
-        $("#oglas7").css({"display":"none"});
-      }
-      else if($("#knjiga").is(":selected")){
-        $("#oglas0").css({"display":"none"});
-        $("#oglas7").css({"padding-top":"5%"});
-        $("#oglas1").css({"display":"none"});
-        $("#oglas2").css({"display":"none"});
-        $("#oglas3").css({"display":"none"});
-        $("#oglas4").css({"display":"none"});
-        $("#oglas5").css({"display":"none"});
-        $("#oglas6").css({"display":"none"});
-        $("#oglas7").css({"display":"block"});
-      }
-      else if($("#namestaj").is(":selected")){
-        $("#oglas0").css({"display":"none"});
-        $("#oglas4").css({"padding-top":"5%"});
-        $("#oglas1").css({"display":"none"});
-        $("#oglas2").css({"display":"none"});
-        $("#oglas3").css({"display":"none"});
-        $("#oglas4").css({"display":"block"});
-        $("#oglas5").css({"display":"none"});
-        $("#oglas6").css({"display":"none"});
-        $("#oglas7").css({"display":"none"});
-      }
-      else if($("#drugo").is(":selected")){
-        $("#oglas0").css({"display":"block"});
-        $("#oglas1").css({"display":"block"});
-        $("#oglas2").css({"display":"block"});
-        $("#oglas3").css({"display":"block"});
-        $("#oglas4").css({"display":"block"});
-        $("#oglas5").css({"display":"block"});
-        $("#oglas6").css({"display":"block"});
-        $("#oglas7").css({"display":"block"});
-        $("#oglas0", "#oglas1", "oglas2", "#oglas3").css({"padding-top":"0%"});
-      }
-    })
-    
-  })
-  </script>
+<script src="homepage.js"></script>
 <div class="footer">
   <div id="button"></div>
 <div id="container">

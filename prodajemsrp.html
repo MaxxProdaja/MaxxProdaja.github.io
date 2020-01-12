@@ -25,7 +25,7 @@
         <li style="padding-right: 0%;"><a href="index.html"><img src="eng.jpg" width="55%"></a></li>
       </ul>
     </li>
-    <li class="nav-item-center" style="margin-right: 8%;"> <a href="#"> <img src="maxShort.png" width="75px"></a>
+    <li class="nav-item-center" style="margin-right: 8%;"> <img onclick="topFunction()" title="idi na vrh" src="maxShort.png" width="75px">
     </li><li class="nav-item-right dropdown"><a href="loginsrp.html"><i class="fa fa-fw fa-user" style="font-size: 4em; color: #ffa922;"></i></a></li>
   </ul>
 </div>
@@ -37,14 +37,8 @@
     <li style="padding: 0% 9% 0% 9%;"><a href="prodajemsrp.html"><b>PRODAJEM</b></a></li>
 </ul>
 </div>
-<script>
-function promeni1(obj)
-        {
-            let lbl = document.getElementById("rez1");
-            rez1.innerHTML =obj.value +  "€";
-        }
-      </script>
-<div class="Centriran">
+
+<div class="Centriran" >
   <div class="filter showhim"><i class="fa fa-filter" aria-hidden="true">Filtriraj</i></div>
   <div class="filteropcije showme"><pre>Sta prodajete?
     <select class="form-control" id="prodaja1">
@@ -57,77 +51,112 @@ function promeni1(obj)
       <option id="namestaj">Namestaj</option>
       <option id="drugo">Drugo...</option>
     </select>
-    Odaberi Maximalnu cenu.<input type="range" min="1" max="999" value="1" onmousemove="promeni1(this)"><label id="rez1">1€</label>
+    <label>Odaberi maximalnu cenu.</label><label id="rez1"></label>
+    <input id="cena" type="range" class="form-control-range" onmousemove="promeni1(this)">
   </pre></div>
   <div class="container-fluid" style="padding-top: 5%;" id="oglas0">
     <div class="row"> <div class="col-12 mt-3"> <div class="card"><div class="card-horizontal"> <div class="img-square-wrapper">
-    <img class="oglas" src="oglas0.jpg" alt="Card image cap">
+    <img class="oglas" src="oglas00.jpg" alt="Card image cap">
                       </div>
                       <div class="card-body">
-                          <h4 class="card-title">Otkup Iphone telefona</h4>
-                          <p class="card-text">Kupujem iPhone 6, iPhone 6 Plus, iPhone 7, iPhone 7 Plus, iPhone 8, iPhone 8 Plus, iPhone X, XS, XS Max, 11, 11pro sa polupanim/razlupanim/ostecenim displejom ali sa ispravnom plocom, stanje nebitno, bitno je samo da ploca radi i da je 100% ispravna, oprema pozeljna. . . </p>
+                          <h4 class="card-title">Samsung Galaxy S10 Plus Duos (8/128 GB) Full Pack Garancija</h4>
+                          <p class="card-text">Kupujte 100 % bezbedno.  
+                            Povracaj novca ako niste zadovoljni telefonom.  
+                            Svaki telefon sa radnom garancijom od 30 dana.  
+                            Besprekorno ispravan telefon.  
+                            Odlicno ocuvan.  
+                            Za sve mreze.  
+                            Za dve kartice.  
+                            Bela boja.  
+                            8 GB Ram
+                            128 GB Rom
+                            Uz telefon :  
+                            Kutija
+                            Punjac
+                            Data kabal </p>
         </div></div>
         <div class="card-footer">
-      <small class="text-muted">Postavljeno pre 5 sati.</small> <p style="float: right;"><b>Cena:Dogovor</b></p>
+      <small class="text-muted">Postavljeno pre 5 sati.</small> <p id="cena1" style="float: right;"><b>Cena:499€</b></p>
        </div></div></div></div></div>
 
        <div class="container-fluid" id="oglas1">
         <div class="row"> <div class="col-12 mt-3"> <div class="card"><div class="card-horizontal"> <div class="img-square-wrapper">
-        <img class="oglas" src="oglas1.jpg" alt="Card image cap">
+        <img class="oglas" src="oglas11.jpg" alt="Card image cap">
                           </div>
                           <div class="card-body">
-                              <h4 class="card-title">Kupujem laptop</h4>
-                              <p class="card-text">Savrseno ocuvan, baterija ispravna, bez garancije.
-
-                                Specifikacije:
-                                
-                                    CPU - Intel® Core™ i7-3630QM CPU @ 2.40GHz
-                                    OS - Windows 10
-                                    Chpset - Intel® HM76
-                                    Memory - DDR3 1333/1600MHz, 2 slots, Max. 8GB
-                                    Display- 15.6" Full HD (1920x1080), Anti-glare
-                                    GPU - NVIDIA GeForce GTX 660M (2GB GDDR5)
-                                    Integrated GPU - Intel(R) HD Graphics 4000
-                                    Storage - 750GB SATA 7200/5400 rpm</p>
+                              <h4 class="card-title">Apple MacBook Pro 16 inch</h4>
+                              <p class="card-text">2.3GHz 8-core 9th-generation Intel Core i9 processor
+                                Turbo Boost up to 4.8GHz
+                                AMD Radeon Pro 5500M with 4GB of GDDR6 memory
+                                16GB 2666MHz DDR4 memory
+                                1TB SSD storage
+                                16-inch Retina display with True Tone
+                                Touch Bar and Touch ID
+                                Four Thunderbolt 3 ports</p>
             </div></div>
             <div class="card-footer">
-          <small class="text-muted">Postavljeno pre 1 dan</small> <p style="float: right;"><b>Cena:700</b></p>
+          <small class="text-muted">Postavljeno pre 1 dan</small> <p id="cena2" style="float: right;"><b>Cena:700€</b></p>
            </div></div></div></div></div>
 
            <div class="container-fluid" id="oglas2">
             <div class="row"> <div class="col-12 mt-3"> <div class="card"><div class="card-horizontal"> <div class="img-square-wrapper">
-            <img class="oglas" src="oglas2.jpg" alt="Card image cap">
+            <img class="oglas" src="oglas22.jpg" alt="Card image cap">
                               </div>
                               <div class="card-body">
-                                  <h4 class="card-title">Kupujem Automobil toyota rav4</h4>
-                                  <p class="card-text">Kupujem automobil sa slike.Ponude i cene posaljite na broj:0655620376. Placam u kesu ili na lizing(po dogovoru). Maksimalna cena 5000e</p>
+                                  <h4 class="card-title">Volkswagen Golf 6 1.6 tdi 2011. godište</h4>
+                                  <p class="card-text">Emisiona klasa motora
+                                    Euro 5
+                                    Pogon
+                                    Prednji
+                                    Menjač
+                                    Manuelni 5 brzina
+                                    Broj vrata
+                                    4/5 vrata
+                                    Broj sedišta
+                                    5 sedišta
+                                    Strana volana
+                                    Levi volan
+                                    Klima
+                                    Automatska klima
+                                    Boja
+                                    Siva
+                                    Materijal enterijera
+                                    Štof
+                                    Boja enterijera
+                                    Crna
+                                    Registrovan do
+                                    Nije registrovan
+                                    Poreklo vozila
+                                    Na ime kupca
+                                    Oštećenje
+                                    Nije oštećen</p>
                 </div></div>
                 <div class="card-footer">
-              <small class="text-muted">Postavljeno pre 1 dan.</small><p style="float: right;"><b>Cena:5000</b></p>
+              <small class="text-muted">Postavljeno pre 1 dan.</small><p id="cena3" style="float: right;"><b>Cena:5000€</b></p>
                </div></div></div></div></div>
 
                <div class="container-fluid" id="oglas3">
                 <div class="row"> <div class="col-12 mt-3"> <div class="card"><div class="card-horizontal"> <div class="img-square-wrapper">
-                <img class="oglas" src="oglas3.jpg" alt="Card image cap">
+                <img class="oglas" src="oglas33.jpg" alt="Card image cap">
                                   </div>
                                   <div class="card-body">
-                                      <h4 class="card-title">Kupujem Espresso masinu</h4>
-                                      <p class="card-text">Kupujem espreso masinu po mogucnosti sa garantnim listom i probom na licu mesta.</p>
+                                      <h4 class="card-title">Nova Espresso masina</h4>
+                                      <p class="card-text">Ne koristena espresso masina sa 2 godine garancije. Moze za profesionalne i za kucne namene.</p>
                     </div></div>
                     <div class="card-footer">
-                  <small class="text-muted">Postavljeno pre 1 dan.</small><p style="float: right;"><b>Cena:50</b></p>
+                  <small class="text-muted">Postavljeno pre 1 dan.</small><p id="cena4" style="float: right;"><b>Cena:50€</b></p>
                    </div></div></div></div></div>
 
                    <div class="container-fluid" id="oglas4">
                     <div class="row"> <div class="col-12 mt-3"> <div class="card"><div class="card-horizontal"> <div class="img-square-wrapper">
-                    <img class="oglas" src="oglas4.jpg" alt="Card image cap">
+                    <img class="oglas" src="oglas44.jpg" alt="Card image cap">
                                       </div>
                                       <div class="card-body">
-                                          <h4 class="card-title">Barske stolice</h4>
-                                          <p class="card-text">Kupujem luksuzne barske stolice u okolini Novog Sada. Licno preuzimanje. Cena nije bitna samo trazim vrhunski kvalitet i dizajn...</p>
+                                          <h4 class="card-title">Fotelja HITNO!</h4>
+                                          <p class="card-text">Na prodaju nova fotelja. Ne uklapa mi se u prostoriju, zbog toga ova cena.</p>
                         </div></div>
                         <div class="card-footer">
-                      <small class="text-muted">Postavljeno pre 2 dan.</small><p style="float: right;"><b>Cena:Dogovor</b></p>
+                      <small class="text-muted">Postavljeno pre 2 dan.</small><p id="cena5" style="float: right;"><b>Cena:30€</b></p>
                        </div></div></div></div></div>
 
                        <div class="container-fluid" id="oglas5">
@@ -136,132 +165,50 @@ function promeni1(obj)
                                           </div>
                                           <div class="card-body">
                                               <h4 class="card-title">Alienware laptop</h4>
-                                              <p class="card-text">Kupujem alienware gaming laptop sa minimum 32gb rama, i 6gb grafickom. Samo licno preuzimanje i provera na licu mesta. placam to 1200e</p>
+                                              <p class="card-text">Na prodaju alienware gaming laptop sa 32gb rama, i 6gb grafickom. Samo licno preuzimanje i provera na licu mesta. placam to 1200e</p>
                             </div></div>
                             <div class="card-footer">
-                          <small class="text-muted">Postavljeno pre 2 dan.</small><p style="float: right;"><b>Cena:1200</b></p>
+                          <small class="text-muted">Postavljeno pre 2 dan.</small><p id="cena6" style="float: right;"><b>Cena:1200€</b></p>
                            </div></div></div></div></div>
 
                            <div class="container-fluid" id="oglas6">
+      
                             <div class="row"> <div class="col-12 mt-3"> <div class="card"><div class="card-horizontal"> <div class="img-square-wrapper">
                             <img class="oglas" src="oglas6.jpg" alt="Card image cap">
                                               </div>
                                               <div class="card-body">
                                                   <h4 class="card-title">Kucni ljubimac</h4>
-                                                  <p class="card-text">Kupujem kucnog ljubimca sa zavedenim dokumentima i pasosom.Prioritet imaju manji kucni ljubimci (ptica, hrcak i td...). Kupuem iskljucivo mladuncad ne starija od 2 meseca.</p>
+                                                  <p class="card-text">Prodajem kucnog ljubimca sa zavedenim dokumentima i pasosom. Mladuncad ne starija od 2 meseca.</p>
+      
                                 </div></div>
                                 <div class="card-footer">
-                              <small class="text-muted">Postavljeno pre 2 dan.</small><p style="float: right;"><b>Cena:Dogovor</b></p>
-                               </div></div></div></div></div>
+                              <small class="text-muted">Postavljeno pre 2 dan.</small><p id="cena7" style="float: right;"><b>Cena:50€</b></p>
+                               </div></div></div></div>
+                              </div>
 
                                <div class="container-fluid" id="oglas7">
+      
                                 <div class="row"> <div class="col-12 mt-3"> <div class="card"><div class="card-horizontal"> <div class="img-square-wrapper">
                                 <img class="oglas" src="oglas7.jpg" alt="Card image cap">
                                                   </div>
                                                   <div class="card-body">
                                                       <h4 class="card-title">Udzbenik</h4>
-                                                      <p class="card-text">Vrsimo otkup skolskih udzbenika svih generacija. Cena zavisi od kvaliteta.</p>
+                                                      <p class="card-text">Vrsimo otkup i prodaju skolskih udzbenika svih generacija. Cena zavisi od kvaliteta.</p>
                                     </div></div>
                                     <div class="card-footer">
-                                  <small class="text-muted">Postavljeno pre 6 dan.</small><p style="float: right;"><b>Cena:Dogovor</b></p>
+                                  <small class="text-muted">Postavljeno pre 6 dan.</small><p id="cena8" style="float: right;"><b>Cena:10€</b></p>
                                    </div></div></div></div></div>
+                                   <div id="nemaoglasa" style="display: none; padding: 20%;"><h1>NAZALOST NEMA TAKVIH OGLASA</h1></div>
 
 </div>
-<script>
-  $(function() {
-    $("#prodaja1").change(function() {
-      if($("#laptop").is(":selected"))
-      {
-        $("#oglas0").css({"display":"none"});
-        $("#oglas1").css({"display":"block"});
-        $("#oglas1").css({"padding-top":"5%"});
-        $("#oglas2").css({"display":"none"});
-        $("#oglas3").css({"display":"none"});
-        $("#oglas4").css({"display":"none"});
-        $("#oglas5").css({"display":"block"});
-        $("#oglas6").css({"display":"none"});
-        $("#oglas7").css({"display":"none"});
-       }
-      else if($("#telefon").is(":selected"))
-      {
-        $("#oglas0").css({"display":"block"});
-        $("#oglas0").css({"padding-top":"5%"});
-        $("#oglas1").css({"display":"none"});
-        $("#oglas2").css({"display":"none"});
-        $("#oglas3").css({"display":"none"});
-        $("#oglas4").css({"display":"none"});
-        $("#oglas5").css({"display":"none"});
-        $("#oglas6").css({"display":"none"});
-        $("#oglas7").css({"display":"none"});
-      }
-      else if($("#auto").is(":selected"))
-      {
-        $("#oglas0").css({"display":"none"});
-        $("#oglas2").css({"padding-top":"5%"});
-        $("#oglas1").css({"display":"none"});
-        $("#oglas2").css({"display":"block"});
-        $("#oglas3").css({"display":"none"});
-        $("#oglas4").css({"display":"none"});
-        $("#oglas5").css({"display":"none"});
-        $("#oglas6").css({"display":"none"});
-        $("#oglas7").css({"display":"none"});
-      }
-      else if($("#kucni").is(":selected"))
-      {
-        $("#oglas0").css({"display":"none"});
-        $("#oglas3").css({"padding-top":"5%"});
-        $("#oglas1").css({"display":"none"});
-        $("#oglas2").css({"display":"none"});
-        $("#oglas3").css({"display":"block"});
-        $("#oglas4").css({"display":"none"});
-        $("#oglas5").css({"display":"none"});
-        $("#oglas6").css({"display":"none"});
-        $("#oglas7").css({"display":"none"});
-      }
-      else if($("#knjiga").is(":selected")){
-        $("#oglas0").css({"display":"none"});
-        $("#oglas7").css({"padding-top":"5%"});
-        $("#oglas1").css({"display":"none"});
-        $("#oglas2").css({"display":"none"});
-        $("#oglas3").css({"display":"none"});
-        $("#oglas4").css({"display":"none"});
-        $("#oglas5").css({"display":"none"});
-        $("#oglas6").css({"display":"none"});
-        $("#oglas7").css({"display":"block"});
-      }
-      else if($("#namestaj").is(":selected")){
-        $("#oglas0").css({"display":"none"});
-        $("#oglas4").css({"padding-top":"5%"});
-        $("#oglas1").css({"display":"none"});
-        $("#oglas2").css({"display":"none"});
-        $("#oglas3").css({"display":"none"});
-        $("#oglas4").css({"display":"block"});
-        $("#oglas5").css({"display":"none"});
-        $("#oglas6").css({"display":"none"});
-        $("#oglas7").css({"display":"none"});
-      }
-      else if($("#drugo").is(":selected")){
-        $("#oglas0").css({"display":"block"});
-        $("#oglas1").css({"display":"block"});
-        $("#oglas2").css({"display":"block"});
-        $("#oglas3").css({"display":"block"});
-        $("#oglas4").css({"display":"block"});
-        $("#oglas5").css({"display":"block"});
-        $("#oglas6").css({"display":"block"});
-        $("#oglas7").css({"display":"block"});
-        $("#oglas0", "#oglas1", "oglas2", "#oglas3").css({"padding-top":"0%"});
-      }
-    })
-    
-  })
-  </script>
+<script src="homepage.js"></script>
 <div class="footer">
   <div id="button"></div>
 <div id="container">
 <div id="cont">
 <div class="footer_center">
        <pre><h3><a href="kontaktsrp.html"><i class="fa fa-address-book-o" style="font-size:26px"> </i>KONTAKTIRAJTE NAS  </a>  <a href="index.html"><i class="fa fa-info" style="font-size:26px"> </i>INFO</a>    <a href="ocenitesrp.html"><i class="fa fa-star-o" style="font-size:26px"> </i>OCENITE NAS</a></h3></pre>
-</div>
+       © 2019 MaxxProdaja sva prava sadrzana.</div>
 </div>
 </div>
 </div>
