@@ -61,6 +61,29 @@ pre {
     font-size: 16px;
 }
 
+.nav1 {
+  width: 24%;
+  height: 5%;
+  transition: width 2s, height -1s;
+}
+.nav1:hover {
+  width: 30%;
+  height: 50px;
+}
+a:hover
+{
+  color: #333;
+  text-decoration:none;
+  border-bottom: 3px solid rgba(255, 217, 0, 0.63);
+  border-bottom-left-radius:3px ;
+  border-bottom-right-radius:3px ;
+}
+
+.active{
+  border-bottom: 3px solid rgba(255, 217, 0, 0.63);
+  border-bottom-left-radius:3px ;
+  border-bottom-right-radius:3px ;
+}
 .showme
 {
   position: fixed;
@@ -114,6 +137,7 @@ pre {
   width: 100%;
   border-radius: 10px 10px 10px 10px;
   background-image: linear-gradient(to right, #bead962d,#ffffff, #ffffff, #bea98a3d);
+  cursor: pointer;
 }
 
 .nav{

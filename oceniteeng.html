@@ -22,30 +22,151 @@
     <li class="nav-item-left" style="margin-left: 3%; padding:0% 0% 0% 0%;" > 
       <ul>
         <li style="padding: 0% 0% 0% 0%;"><a href="index.html"><img src="srb.jpg" width="55%"></a></li>
-        <li style="padding-right: 0%;"><a href="index.html"><img src="eng.jpg" width="55%"></a></li>
+        <li style="padding-right: 0%;"><a href="infoeng.html"><img src="eng.jpg" width="55%"></a></li>
       </ul>
     </li>
     <li class="nav-item-center" style="margin-right: 8%;"> <a href="#"> <img src="maxShort.png" width="75px"></a>
-    </li><li class="nav-item-right dropdown"><a href="loginsrp.html"><i class="fa fa-fw fa-user" style="font-size: 4em; color: #ffa922;"></i></a></li>
+    </li><li class="nav-item-right dropdown"><a href="logineng.html"><i class="fa fa-fw fa-user" style="font-size: 4em; color: #ffa922;"></i></a></li>
   </ul>
 </div>
-<div class="navigacija" style="text-align: center;">
-  <a href="#"><img src="logokraj.png" height="50%" style="padding-top: 1%;"></a>
+<div class="navigacija" id="navigacija" style="text-align: center;">
+  <a href=""><img src="logokraj.png" height="50%" style="padding-top: 1%;"></a>
   <ul class="nav" style="padding-left: 22%;">
-    <li style="padding: 0% 9% 0% 9%;"><a href="pocetnasrp.html" style="text-align: center;"><b>POČETNA</b></a></li>
-    <li style="padding: 0% 9% 0% 9%;"><a href="kupujemsrp.html"><b>KUPUJEM</b></a></li>
-    <li style="padding: 0% 9% 0% 9%;"><a href="prodajemsrp.html"><b>PRODAJEM</b></a></li>
+    <li class="nav1" style="padding: 0% 9% 0% 9%;"><a href="pocetnaeng.html" style="text-align: center;"><b>HOME</b></a></li>
+    <li class="nav1" style="padding: 0% 9% 0% 9%;"><a href="kupujemeng.html"><b>PURCHASE</b></a></li>
+    <li class="nav1" style="padding: 0% 9% 0% 9%;"><a href="prodajemeng.html"><b>SELL</b></a></li>
 </ul>
 </div>
 <div class="Centriran">
+  <div >
+    <fieldset class="rating" style="padding-right: 37%;">
+      <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="PERFECT - 5 stars"></label>
+      <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="GOOD - 4 stars"></label>
+      <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="NOT BAD - 3 stars"></label>
+      <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="BAD - 2 stars"></label>
+      <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="VERY BAD! - 1 star"></label>
+  </fieldset>
+  </div>
+  <br>
 
+<div class="row">
+  <div class="side"><div>5 star</div></div>
+  <div class="middle"><div class="bar-container"><div class="bar-5"></div></div></div>
+  <div class="side right"><div id="star55">150</div><div id="star55+" style="display: none;">151</div></div>
+  <div class="side"><div>4 star</div></div>
+  <div class="middle"><div class="bar-container"><div class="bar-4"></div></div></div>
+  <div class="side right"><div id="star44">63</div><div id="star44+" style="display: none;">64</div></div>
+  <div class="side"><div>3 star</div></div>
+  <div class="middle"><div class="bar-container"><div class="bar-3"></div></div></div>
+  <div class="side right"><div id="star33">15</div><div id="star33+" style="display: none;">16</div></div>
+  <div class="side"><div>2 star</div></div>
+  <div class="middle"><div class="bar-container"><div class="bar-2"></div></div></div>
+  <div class="side right"><div id="star22">6</div><div id="star22+" style="display: none;">7</div></div>
+  <div class="side"><div>1 star</div></div>
+  <div class="middle"><div class="bar-container"><div class="bar-1"></div></div></div>
+  <div class="side right"><div id="star11">20</div><div id="star11+" style="display: none;">21</div></div>
+</div>
+<h2 id="5zvezdica" style="display: none;">Glad to hear you liked the site. THANK YOU!</h2>
+<h2 id="4zvezdica" style="display: none;">Glad to hear that the site is very well liked. THANK YOU!</h2>
+<h3 id="3zvezdica" style="display: none;">We appreciate everyone's opinion. THANK YOU!</h3>
+<h3 id="2zvezdica" style="display: none;">We'll try to fix the page. THANK YOU!</h3>
+<h3 id="1zvezdica" style="display: none;">OK. THANK YOU!</h3>
+
+<script type="text/javascript">
+ $('#star5').click(function() {  
+    $("#star55").css({"display":"none"});
+    $("#star44").css({"display":"block"});
+    $("#star33").css({"display":"block"});
+    $("#star22").css({"display":"block"});
+    $("#star11").css({"display":"block"});
+    $("#star55+").css({"display":"block"});
+    $("#star44+").css({"display":"none"});
+    $("#star33+").css({"display":"none"});
+    $("#star22+").css({"display":"none"});
+    $("#star11+").css({"display":"none"});
+    $("#5zvezdica").css({"display":"block"});
+    $("#4zvezdica").css({"display":"none"});
+    $("#3zvezdica").css({"display":"none"});
+    $("#2zvezdica").css({"display":"none"});
+    $("#1zvezdica").css({"display":"none"});
+});
+$('#star4').click(function() {  
+    $("#star55").css({"display":"block"});
+    $("#star44").css({"display":"none"});
+    $("#star33").css({"display":"block"});
+    $("#star22").css({"display":"block"});
+    $("#star11").css({"display":"block"});
+    $("#star55+").css({"display":"none"});
+    $("#star44+").css({"display":"block"});
+    $("#star33+").css({"display":"none"});
+    $("#star22+").css({"display":"none"});
+    $("#star11+").css({"display":"none"});
+    $("#4zvezdica").css({"display":"block"});
+    $("#5zvezdica").css({"display":"none"});
+    $("#3zvezdica").css({"display":"none"});
+    $("#2zvezdica").css({"display":"none"});
+    $("#1zvezdica").css({"display":"none"});
+});
+$('#star3').click(function() {  
+    $("#star55").css({"display":"block"});
+    $("#star44").css({"display":"block"});
+    $("#star33").css({"display":"none"});
+    $("#star22").css({"display":"block"});
+    $("#star11").css({"display":"block"});
+    $("#star55+").css({"display":"none"});
+    $("#star44+").css({"display":"none"});
+    $("#star22+").css({"display":"none"});
+    $("#star11+").css({"display":"none"});
+    $("#star33+").css({"display":"block"});
+    $("#3zvezdica").css({"display":"block"});
+    $("#4zvezdica").css({"display":"none"});
+    $("#5zvezdica").css({"display":"none"});
+    $("#2zvezdica").css({"display":"none"});
+    $("#1zvezdica").css({"display":"none"});
+});
+$('#star2').click(function() {  
+    $("#star55").css({"display":"block"});
+    $("#star44").css({"display":"block"});
+    $("#star33").css({"display":"block"});
+    $("#star22").css({"display":"none"});
+    $("#star11").css({"display":"block"});
+    $("#star55+").css({"display":"none"});
+    $("#star44+").css({"display":"none"});
+    $("#star33+").css({"display":"none"});
+    $("#star11+").css({"display":"none"});
+    $("#star22+").css({"display":"block"});
+    $("#2zvezdica").css({"display":"block"});
+    $("#4zvezdica").css({"display":"none"});
+    $("#3zvezdica").css({"display":"none"});
+    $("#5zvezdica").css({"display":"none"});
+    $("#1zvezdica").css({"display":"none"});
+});
+$('#star1').click(function() {  
+    $("#star55").css({"display":"block"});
+    $("#star44").css({"display":"block"});
+    $("#star33").css({"display":"block"});
+    $("#star22").css({"display":"block"});
+    $("#star11").css({"display":"none"});
+    $("#star55+").css({"display":"none"});
+    $("#star44+").css({"display":"none"});
+    $("#star33+").css({"display":"none"});
+    $("#star22+").css({"display":"none"});
+    $("#star11+").css({"display":"block"});
+    $("#1zvezdica").css({"display":"block"});
+    $("#4zvezdica").css({"display":"none"});
+    $("#3zvezdica").css({"display":"none"});
+    $("#2zvezdica").css({"display":"none"});
+    $("#5zvezdica").css({"display":"none"});
+});
+  </script>
 </div>
 <div class="footer">
   <div id="button"></div>
 <div id="container">
 <div id="cont">
 <div class="footer_center">
-       <pre><h3><a href="kontaktsrp.html"><i class="fa fa-address-book-o" style="font-size:26px"> </i>KONTAKTIRAJTE NAS  </a>  <a href="index.html"><i class="fa fa-info" style="font-size:26px"> </i>INFO</a>    <a href="ocenitesrp.html"><i class="fa fa-star-o" style="font-size:26px"> </i>OCENITE NAS</a></h3></pre>
+       <pre><h3><a href="kontakteng.html"><i class="fa fa-address-book-o" style="font-size:26px"> </i>CONTACT US  </a>  <a href="infoeng.html"><i class="fa fa-info" style="font-size:26px"> </i>INFO</a>    <a class="active" href="oceniteeng.html"><i class="fa fa-star-o" style="font-size:26px"> </i>RATE US</a></h3></pre>
+       © 2019 MaxxProdaja all rights reserved.
 </div>
 </div>
 </div>

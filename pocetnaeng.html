@@ -21,31 +21,220 @@
   <ul class="navbar">
     <li class="nav-item-left" style="margin-left: 3%; padding:0% 0% 0% 0%;" > 
       <ul>
-        <li style="padding: 0% 0% 0% 0%;"><a href="index.html"><img src="srb.jpg" width="55%"></a></li>
-        <li style="padding-right: 0%;"><a href="index.html"><img src="eng.jpg" width="55%"></a></li>
+        <li style="padding: 0% 0% 0% 0%;"><a href="pocetnasrp.html"><img src="srb.jpg" width="55%"></a></li>
+        <li style="padding-right: 0%;"><a href="pocetnaeng.html"><img src="eng.jpg" width="55%"></a></li>
       </ul>
     </li>
     <li class="nav-item-center" style="margin-right: 8%;"> <a href="#"> <img src="maxShort.png" width="75px"></a>
-    </li><li class="nav-item-right dropdown"><a href="loginsrp.html"><i class="fa fa-fw fa-user" style="font-size: 4em; color: #ffa922;"></i></a></li>
+    </li><li class="nav-item-right dropdown"><a href="logineng.html"><i class="fa fa-fw fa-user" style="font-size: 4em; color: #ffa922;"></i></a></li>
   </ul>
 </div>
-<div class="navigacija" style="text-align: center;">
-  <a href="#"><img src="logokraj.png" height="50%" style="padding-top: 1%;"></a>
+<div class="navigacija" id="navigacija" style="text-align: center;">
+  <a href=""><img src="logokraj.png" height="50%" style="padding-top: 1%;"></a>
   <ul class="nav" style="padding-left: 22%;">
-    <li style="padding: 0% 9% 0% 9%;"><a href="pocetnasrp.html" style="text-align: center;"><b>POČETNA</b></a></li>
-    <li style="padding: 0% 9% 0% 9%;"><a href="kupujemsrp.html"><b>KUPUJEM</b></a></li>
-    <li style="padding: 0% 9% 0% 9%;"><a href="prodajemsrp.html"><b>PRODAJEM</b></a></li>
+    <li class="nav1 active" style="padding: 0% 9% 0% 9%;"><a href="pocetnaeng.html" style="text-align: center;"><b>HOME</b></a></li>
+    <li class="nav1" style="padding: 0% 9% 0% 9%;"><a href="kupujemeng.html"><b>PURCHASE</b></a></li>
+    <li class="nav1" style="padding: 0% 9% 0% 9%;"><a href="prodajemeng.html"><b>SELL</b></a></li>
 </ul>
 </div>
 <div class="Centriran">
+<h2>Welcome!!</h2>
+<h4>Place an ad!</h4>
+<p style="margin: 0%;">Select an action.</p>
+<select class="form-control" style="border-radius: 5%;" id="radnja">
+  <option value="nista">Chose..</option>
+  <option id="kupujem">Purchase</option>
+  <option id="prodajem">Sell</option>
+  <option value=""disabled>Change</option>
+</select>
+<div style="display: none;" id="kupovina">
+<p style="margin: 0%;">what are u buying?</p>
+</div>
+<div style="display: none;" id="prodaja">
+  <p style="margin: 0%;">What are u salling?</p>
+</div>
+<div id="prodaja1" style="display: none;">
+  <select class="form-control">
+    <option value="nista">Chose..</option>
+    <option id="laptop">Laptop</option>
+    <option id="telefon">Phone</option>
+    <option id="auto">Car</option>
+    <option id="kucni">Home appliance</option>
+    <option id="knjiga">Book</option>
+    <option id="namestaj">Furniture</option>
+    <option id="drugo">Other...</option>
+  </select>
+</div id="prodaja1">
+  <script type="text/javascript">
+    $(function() {
+        $("#radnja").change(function() {
+            if($("#kupujem").is(":selected")) {
+                $("#kupovina").css({"display":"block"});
+                $("#prodaja").css({"display":"none"});
+                $("#prodaja1").css({"display":"block"});
+            }
+            else if($("#prodajem").is(":selected")) {
+                $("#prodaja").css({"display":"block"});
+                $("#kupovina").css({"display":"none"});
+                $("#prodaja1").css({"display":"block"});
+            }
+            else{
+              $("#prodaja").css({"display":"none"});
+              $("#kupovina").css({"display":"none"});
+              $("#ostalo").css({"display":"none"});
+            }
+        });
+    });
+    </script>
+    <script>
+    $(function() {
+      $("#prodaja1").change(function() {
+        if($("#laptop").is(":selected"))
+        {
+          $("#laptopovi").css({"display":"block"});
+          $("#telefoni").css({"display":"none"});
+          $("#automobili").css({"display":"none"});
+          $("#uredjaji").css({"display":"none"});
+                $("#ostalo").css({"display":"block"});
+                $("#postavi").css({"display":"block"});
+        }
+        else if($("#telefon").is(":selected"))
+        {
+          $("#laptopovi").css({"display":"none"});
+          $("#telefoni").css({"display":"block"});
+          $("#automobili").css({"display":"none"});
+          $("#uredjaji").css({"display":"none"});
+                $("#ostalo").css({"display":"block"});
+                $("#postavi").css({"display":"block"});
+        }
+        else if($("#auto").is(":selected"))
+        {
+          $("#laptopovi").css({"display":"none"});
+          $("#telefoni").css({"display":"none"});
+          $("#automobili").css({"display":"block"});
+          $("#uredjaji").css({"display":"none"});
+                $("#ostalo").css({"display":"block"});
+                $("#postavi").css({"display":"block"});
+        }
+        else if($("#kucni").is(":selected"))
+        {
+          $("#laptopovi").css({"display":"none"});
+          $("#telefoni").css({"display":"none"});
+          $("#automobili").css({"display":"none"});
+          $("#uredjaji").css({"display":"block"});
+                $("#ostalo").css({"display":"block"});
+                $("#postavi").css({"display":"block"});
+        }
+        else if($("#knjiga").is(":selected")){
 
+          $("#ostalo").css({"display":"block"});
+          $("#postavi").css({"display":"block"});
+        }
+        else if($("#namestaj").is(":selected")){
+          
+          $("#ostalo").css({"display":"block"});
+          $("#postavi").css({"display":"block"});
+        }
+        else if($("#drugo").is(":selected")){
+          
+          $("#ostalo").css({"display":"block"});
+          $("#postavi").css({"display":"block"});
+        }
+      })
+      
+    })
+    </script>
+    <div id="laptopovi" style="display: none;">
+      <p>Select the brand of the laptop</p>
+      <select class="form-control">
+        <option>Chose..</option>
+        <option>Msi</option>
+        <option>Samsung</option>
+        <option>Hp</option>
+        <option>Toshiba</option>
+        <option>Asus</option>
+        <option>Dell</option>
+        <option>Other...</option>
+      </select></div>
+      <div id="telefoni" style="display: none;">
+        <p>Select the brad of the phone</p>
+        <select class="form-control">
+          <option>Chose..</option>
+          <option>Nokia</option>
+          <option>Samsung</option>
+          <option>Sony</option>
+          <option>Huawei</option>
+          <option>Asus</option>
+          <option>Shao mi</option>
+          <option>Other...</option>
+        </select>
+      </div>
+      <div id="automobili" style="display: none;">
+        <p>Select the brand of the car</p>
+        <select class="form-control">
+          <option>Chose..</option>
+          <option>Audi</option>
+          <option>Wolfvagen</option>
+          <option>Tesla</option>
+          <option>Toyota</option>
+          <option>Suzuki</option>
+          <option>Fiat</option>
+          <option>Peugeot</option>
+          <option>Other...</option>
+        </select>
+      </div>
+      <div id="uredjaji" style="display: none;">
+        <p>Select the brand of the appliance</p>
+        <select class="form-control">
+          <option>Izaberi..</option>
+          <option>Gorenje</option>
+          <option>Samsung</option>
+          <option>Hp</option>
+          <option>Toshiba</option>
+          <option>Asus</option>
+          <option>Privileg</option>
+          <option>Drugo...</option>
+        </select>
+      </div>
+<div id="ostalo" style="display: none;">
+<p>Enter ad title.</p>
+<input class="form-control" type="text">
+<div class="form-group">
+  <label for="opis">Product Description:</label>
+  <textarea id="opis1" class="form-control" rows="5" placeholder="Describe your product in detail."></textarea>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text">€</span>
+    </div>
+    <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
+    <div class="input-group-append">
+      <span class="input-group-text">.00</span>
+    </div>
+  </div>
+</div>
+  <p>Fixed price?</p>
+  <form>
+    <div class="radio-inline">
+      <label><input type="radio" name="optradio" checked>YES</label>
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="optradio">NO</label>
+    </div>
+    </form>
+    <input style="margin-left:18%;" type="checkbox" class="form-check-input">Change possible? <br>
+    <p>Chose a photo.</p>
+    <input type="file" class="btn btn-secondary">
+    <button class="btn btn-secondary" id="postavi" style="display: none; border-radius: 5%;">Place the ad</button>
+    <h4>See our other ads as well.</h4>
+</div>
 </div>
 <div class="footer">
   <div id="button"></div>
 <div id="container">
 <div id="cont">
 <div class="footer_center">
-       <pre><h3><a href="kontaktsrp.html"><i class="fa fa-address-book-o" style="font-size:26px"> </i>KONTAKTIRAJTE NAS  </a>  <a href="index.html"><i class="fa fa-info" style="font-size:26px"> </i>INFO</a>    <a href="ocenitesrp.html"><i class="fa fa-star-o" style="font-size:26px"> </i>OCENITE NAS</a></h3></pre>
+       <pre><h3><a href="kontakteng.html"><i class="fa fa-address-book-o" style="font-size:26px"> </i>CONTACT US  </a>  <a href="infoeng.html"><i class="fa fa-info" style="font-size:26px"> </i>INFO</a>    <a href="oceniteeng.html"><i class="fa fa-star-o" style="font-size:26px"> </i>RATE US</a></h3></pre>
+       © 2019 MaxxProdaja all rights reserved.
 </div>
 </div>
 </div>

@@ -21,32 +21,196 @@
   <ul class="navbar">
     <li class="nav-item-left" style="margin-left: 3%; padding:0% 0% 0% 0%;" > 
       <ul>
-        <li style="padding: 0% 0% 0% 0%;"><a href="index.html"><img src="srb.jpg" width="55%"></a></li>
-        <li style="padding-right: 0%;"><a href="index.html"><img src="eng.jpg" width="55%"></a></li>
+        <li style="padding: 0% 0% 0% 0%;"><a href="prodajemeng.html"><img src="srb.jpg" width="55%"></a></li>
+        <li style="padding-right: 0%;"><a href="prodajemeng.html"><img src="eng.jpg" width="55%"></a></li>
       </ul>
     </li>
-    <li class="nav-item-center" style="margin-right: 8%;"> <a href="#"> <img src="maxShort.png" width="75px"></a>
-    </li><li class="nav-item-right dropdown"><a href="loginsrp.html"><i class="fa fa-fw fa-user" style="font-size: 4em; color: #ffa922;"></i></a></li>
+    <li class="nav-item-center" style="margin-right: 8%;"> <img onclick="topFunction()" title="idi na vrh" src="maxShort.png" width="75px">
+    </li><li class="nav-item-right dropdown"><a href="logineng.html"><i class="fa fa-fw fa-user" style="font-size: 4em; color: #ffa922;"></i></a></li>
   </ul>
 </div>
-<div class="navigacija" style="text-align: center;">
-  <a href="#"><img src="logokraj.png" height="50%" style="padding-top: 1%;"></a>
-  <ul class="nav" style="padding-left: 22%;">
-    <li style="padding: 0% 9% 0% 9%;"><a href="pocetnasrp.html" style="text-align: center;"><b>POČETNA</b></a></li>
-    <li style="padding: 0% 9% 0% 9%;"><a href="kupujemsrp.html"><b>KUPUJEM</b></a></li>
-    <li style="padding: 0% 9% 0% 9%;"><a href="prodajemsrp.html"><b>PRODAJEM</b></a></li>
+<div class="navigacija" id="navigacija" style="text-align: center;">
+  <a href=""><img src="logokraj.png" height="50%" style="padding-top: 1%;"></a>
+  <ul class="nav sidebar-nav" style="padding-left: 22%;">
+    <li class="nav1" style="padding: 0% 9% 0% 9%;"><a href="pocetnaeng.html" style="text-align: center;"><b>HOME</b></a></li>
+    <li class="nav1" style="padding: 0% 9% 0% 9%;"><a href="kupujemeng.html"><b>PURCHASE</b></a></li>
+    <li class="nav1 active" style="padding: 0% 9% 0% 9%;"><a href="prodajemeng.html"><b>SELL</b></a></li>
 </ul>
 </div>
-<div class="Centriran">
+
+<div class="Centriran" >
+  <div class="filter showhim"><i class="fa fa-filter" aria-hidden="true">Filter</i></div>
+  <div class="filteropcije showme"><pre>What are u salling?
+    <select class="form-control" id="prodaja1">
+      <option value="nista">choose..</option>
+      <option id="laptop">Laptop</option>
+      <option id="telefon">Phone</option>
+      <option id="auto">Car</option>
+      <option id="kucni">Home appliance</option>
+      <option id="knjiga">Book</option>
+      <option id="namestaj">Furniture</option>
+      <option id="drugo">Other...</option>
+    </select>
+    <label>Chose maximum price.</label><label id="rez1"></label>
+    <input id="cena" type="range" class="form-control-range" onmousemove="promeni1(this)">
+  </pre></div>
+  <div class="container-fluid" style="padding-top: 5%;" id="oglas0">
+    <div class="row"> <div class="col-12 mt-3"> <div class="card"><div class="card-horizontal"> <div class="img-square-wrapper">
+    <img class="oglas" src="oglas00.jpg" alt="Card image cap">
+                      </div>
+                      <div class="card-body">
+<h4 class="card-title">
+Samsung Galaxy S10 Plus Duos (8/128 GB) Full Pack Warranty</h4>
+<p class="card-text">Shop 100% Safe.
+Refund if you are not satisfied with your phone.
+Any phone with a 30-day working guarantee.
+A flawlessly correct phone.
+Well preserved.
+For all networks.
+For two cards.
+White color.
+8 GB Ram
+128 GB Rom
+By phone:
+Box
+Charger
+Data cable </p>
+        </div></div>
+        <div class="card-footer">
+      <small class="text-muted">Posted 5 hour ago.</small> <p id="cena1" style="float: right;"><b>Cena:499€</b></p>
+       </div></div></div></div></div>
+
+       <div class="container-fluid" id="oglas1">
+        <div class="row"> <div class="col-12 mt-3"> <div class="card"><div class="card-horizontal"> <div class="img-square-wrapper">
+        <img class="oglas" src="oglas11.jpg" alt="Card image cap">
+                          </div>
+                          <div class="card-body">
+                              <h4 class="card-title">Apple MacBook Pro 16 inch</h4>
+                              <p class="card-text">2.3GHz 8-core 9th-generation Intel Core i9 processor
+                                Turbo Boost up to 4.8GHz
+                                AMD Radeon Pro 5500M with 4GB of GDDR6 memory
+                                16GB 2666MHz DDR4 memory
+                                1TB SSD storage
+                                16-inch Retina display with True Tone
+                                Touch Bar and Touch ID
+                                Four Thunderbolt 3 ports</p>
+            </div></div>
+            <div class="card-footer">
+          <small class="text-muted">Posted 1 day ago.</small> <p id="cena2" style="float: right;"><b>Price:700€</b></p>
+           </div></div></div></div></div>
+
+           <div class="container-fluid" id="oglas2">
+            <div class="row"> <div class="col-12 mt-3"> <div class="card"><div class="card-horizontal"> <div class="img-square-wrapper">
+<img class="oglas" src="oglas22.jpg" alt="Card image cap">
+</div>
+<div class="card-body">
+<h4 class="card-title">Volkswagen Golf 6 1.6 tdi 2011</h4>
+<p class="card-text">Emission class of engine:
+  Euro 5
+  Drive:
+  Front
+  Transmission:
+  5 speed manual
+  Doors:
+  4/5 doors
+  Number of seats:
+  5 seats
+  Steering wheel:
+  Left hand drive
+  Climate:
+  Automatic air conditioning
+  Color:
+  gray
+  Interior Material:
+  Cloth
+  Interior color:
+  black
+  Registered until:
+  Not registered
+  Vehicle origin:
+  In the name of the customer
+  Damage:
+  He was not damaged</p>
+</div></div>
+                <div class="card-footer">
+              <small class="text-muted">Posted 1 day ago.</small><p id="cena3" style="float: right;"><b>Price:5000€</b></p>
+               </div></div></div></div></div>
+
+               <div class="container-fluid" id="oglas3">
+                <div class="row"> <div class="col-12 mt-3"> <div class="card"><div class="card-horizontal"> <div class="img-square-wrapper">
+                <img class="oglas" src="oglas33.jpg" alt="Card image cap">
+                                  </div>
+                                  <div class="card-body">
+                                      <h4 class="card-title">New Espresso machine</h4>
+                                      <p class="card-text">Unused espresso machine with 2 years warranty. It is suitable for both: professional and home use.</p>
+                    </div></div>
+                    <div class="card-footer">
+                  <small class="text-muted">Posted 1 day ago.</small><p id="cena4" style="float: right;"><b>Price:50€</b></p>
+                   </div></div></div></div></div>
+
+                   <div class="container-fluid" id="oglas4">
+                    <div class="row"> <div class="col-12 mt-3"> <div class="card"><div class="card-horizontal"> <div class="img-square-wrapper">
+                    <img class="oglas" src="oglas44.jpg" alt="Card image cap">
+                                      </div>
+                                      <div class="card-body">
+                                          <h4 class="card-title">Armchair quick!</h4>
+                                          <p class="card-text">New armchair for sale. It does not fit my room, so it is low price.</p>
+                        </div></div>
+                        <div class="card-footer">
+                      <small class="text-muted">Posted 2 day ago.</small><p id="cena5" style="float: right;"><b>Price:30€</b></p>
+                       </div></div></div></div></div>
+
+                       <div class="container-fluid" id="oglas5">
+                        <div class="row"> <div class="col-12 mt-3"> <div class="card"><div class="card-horizontal"> <div class="img-square-wrapper">
+                        <img class="oglas" src="oglas5.jpg" alt="Card image cap">
+                                          </div>
+                                          <div class="card-body">
+                                              <h4 class="card-title">Alienware laptop</h4>
+                                              <p class="card-text">
+                                                Alienware gaming laptop for sale with 32gb frame and 6gb graphics. Just a personal download and spot check.</p>
+                            </div></div>
+                            <div class="card-footer">
+                          <small class="text-muted">Posted 2 day ago.</small><p id="cena6" style="float: right;"><b>Price:1200€</b></p>
+                           </div></div></div></div></div>
+
+                           <div class="container-fluid" id="oglas6">
+      
+                            <div class="row"> <div class="col-12 mt-3"> <div class="card"><div class="card-horizontal"> <div class="img-square-wrapper">
+                            <img class="oglas" src="oglas6.jpg" alt="Card image cap">
+                                              </div>
+                                              <div class="card-body">
+                                                  <h4 class="card-title">Pet for salle</h4>
+                                                  <p class="card-text">I sell a pet with documented passport and passport. Cubs not older than 2 months.</p>
+      
+                                </div></div>
+                                <div class="card-footer">
+                              <small class="text-muted">Posted 2 day ago.</small><p id="cena7" style="float: right;"><b>Price:50€</b></p>
+                               </div></div></div></div>
+                              </div>
+
+                               <div class="container-fluid" id="oglas7">
+      
+                                <div class="row"> <div class="col-12 mt-3"> <div class="card"><div class="card-horizontal"> <div class="img-square-wrapper">
+                                <img class="oglas" src="oglas7.jpg" alt="Card image cap">
+                                                  </div>
+                                                  <div class="card-body">
+                                                      <h4 class="card-title">School book</h4>
+                                                      <p class="card-text">We buy and sell school textbooks of all generations. Price depends on quality.</p>
+                                    </div></div>
+                                    <div class="card-footer">
+                                  <small class="text-muted">Posted 6 day ago.</small><p id="cena8" style="float: right;"><b>Cena:10€</b></p>
+                                   </div></div></div></div></div>
+                                   <div id="nemaoglasa" style="display: none; padding: 20%;"><h1>NAZALOST NEMA TAKVIH OGLASA</h1></div>
 
 </div>
+<script src="homepage.js"></script>
 <div class="footer">
   <div id="button"></div>
 <div id="container">
 <div id="cont">
 <div class="footer_center">
-       <pre><h3><a href="kontaktsrp.html"><i class="fa fa-address-book-o" style="font-size:26px"> </i>KONTAKTIRAJTE NAS  </a>  <a href="index.html"><i class="fa fa-info" style="font-size:26px"> </i>INFO</a>    <a href="ocenitesrp.html"><i class="fa fa-star-o" style="font-size:26px"> </i>OCENITE NAS</a></h3></pre>
-</div>
+       <pre><h3><a href="kontakteng.html"><i class="fa fa-address-book-o" style="font-size:26px"> </i>CONTACT US  </a>  <a href="infoeng.html"><i class="fa fa-info" style="font-size:26px"> </i>INFO</a>    <a href="oceniteeng.html"><i class="fa fa-star-o" style="font-size:26px"> </i>RATE US</a></h3></pre>
+       © 2019 MaxxProdaja All rights reserved.</div>
 </div>
 </div>
 </div>

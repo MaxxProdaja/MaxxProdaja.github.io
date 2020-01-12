@@ -16,13 +16,12 @@ function topFunction() {
 let cena1 = document.getElementById('cena');
 cena1.max = 6000;
 
+
 function promeni1(obj)
         {
             var lbl = document.getElementById("rez");
             rez1.innerHTML =  obj.value + "€";
-        }
-
-        
+        }    
 $(function() {
   $("#prodaja1").change(function() {
       if($("#laptop").is(":selected"))

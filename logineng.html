@@ -22,22 +22,80 @@
     <li class="nav-item-left" style="margin-left: 3%; padding:0% 0% 0% 0%;" > 
       <ul>
         <li style="padding: 0% 0% 0% 0%;"><a href="index.html"><img src="srb.jpg" width="55%"></a></li>
-        <li style="padding-right: 0%;"><a href="index.html"><img src="eng.jpg" width="55%"></a></li>
+        <li style="padding-right: 0%;"><a href="infoeng.html"><img src="eng.jpg" width="55%"></a></li>
       </ul>
     </li>
     <li class="nav-item-center" style="margin-right: 8%;"> <a href="#"> <img src="maxShort.png" width="75px"></a>
-    </li><li class="nav-item-right dropdown"><a href="loginsrp.html"><i class="fa fa-fw fa-user" style="font-size: 4em; color: #ffa922;"></i></a></li>
+    </li><li class="nav-item-right dropdown"><a href="logineng.html"><i class="fa fa-fw fa-user active" style="font-size: 4em; color: #ffa922;"></i></a></li>
   </ul>
 </div>
-<div class="navigacija" style="text-align: center;">
-  <a href="#"><img src="logokraj.png" height="50%" style="padding-top: 1%;"></a>
+<div class="navigacija" id="navigacija" style="text-align: center;">
+  <a href=""><img src="logokraj.png" height="50%" style="padding-top: 1%;"></a>
   <ul class="nav" style="padding-left: 22%;">
-    <li style="padding: 0% 9% 0% 9%;"><a href="pocetnasrp.html" style="text-align: center;"><b>POČETNA</b></a></li>
-    <li style="padding: 0% 9% 0% 9%;"><a href="kupujemsrp.html"><b>KUPUJEM</b></a></li>
-    <li style="padding: 0% 9% 0% 9%;"><a href="prodajemsrp.html"><b>PRODAJEM</b></a></li>
+    <li class="nav1" style="padding: 0% 9% 0% 9%;"><a href="pocetnaeng.html" style="text-align: center;"><b>HOME</b></a></li>
+    <li class="nav1" style="padding: 0% 9% 0% 9%;"><a href="kupujemeng.html"><b>PURCHASE</b></a></li>
+    <li class="nav1" style="padding: 0% 9% 0% 9%;"><a href="prodajemeng.html"><b>SELL</b></a></li>
 </ul>
 </div>
 <div class="Centriran">
+  <div class="signup-form" id="napravi">
+    <form action="/examples/actions/confirmation.php" method="post">
+		<h2>Register</h2>
+		<p class="hint-text">Sign in. it's free and only takes a minute.</p>
+        <div class="form-group">
+        <div class="col-xs-6"><input type="text" class="form-control" name="first_name" placeholder="Name" required="required"></div>
+        </div>
+        <div class="form-group">
+				<div class="col-xs-6"><input type="text" class="form-control" name="last_name" placeholder="Surname" required="required"></div>     	
+        </div>
+        <div class="form-group">
+        	<input type="email" class="form-control" name="email" placeholder="Email" required="required">
+        </div>
+		<div class="form-group">
+            <input type="password" class="form-control" name="password" placeholder="Password" required="required">
+        </div>
+		<div class="form-group">
+            <input type="password" class="form-control" name="confirm_password" placeholder="Confirm password" required="required">
+        </div>        
+        <div class="form-group">
+			<label class="checkbox-inline"><input type="checkbox" required="required">I agree <a href="index.html">the terms</a></label>
+		</div>
+		<div class="form-group">
+            <button class="btn btn-dark btn-lg btn-block">Register</button>
+        </div>
+    </form>
+  <div class="text-center" id="ulogujse">you already have an account? <a href="#" style="color: tomato;"> Log in.</a></div>
+
+</div>
+  <div class="signup-form" id="napravljen" style="display: none;">
+    <form action="/examples/actions/confirmation.php" method="post">
+    <h2>Log in</h2>
+    <p class="hint-text">Log in to your account.</p>
+        <div class="form-group">
+          <input type="email" class="form-control" name="email" placeholder="Email" required="required">
+        </div>
+    <div class="form-group">
+            <input type="password" class="form-control" name="password" placeholder="Password" required="required">
+        </div>        
+        <div class="form-group">
+      <label class="checkbox-inline"><input type="checkbox">Leave me logged in.</label>
+    </div>
+    <div class="form-group">
+            <button class="btn btn-dark btn-lg btn-block">Sign in</button>
+        </div>
+    </form>
+  <div class="text-center" id="napravii">U don't have a acc? <a href="#" style="color: tomato;"> Register now.</a></div>
+  </div>
+<script type="text/javascript">
+  $('#napravii').click(function() {  
+     $("#napravi").css({"display":"block"});
+     $("#napravljen").css({"display":"none"});
+  });
+  $('#ulogujse').click(function() {  
+     $("#napravi").css({"display":"none"});
+     $("#napravljen").css({"display":"block"});
+  });
+</script>
 
 </div>
 <div class="footer">
@@ -45,7 +103,8 @@
 <div id="container">
 <div id="cont">
 <div class="footer_center">
-       <pre><h3><a href="kontaktsrp.html"><i class="fa fa-address-book-o" style="font-size:26px"> </i>KONTAKTIRAJTE NAS  </a>  <a href="index.html"><i class="fa fa-info" style="font-size:26px"> </i>INFO</a>    <a href="ocenitesrp.html"><i class="fa fa-star-o" style="font-size:26px"> </i>OCENITE NAS</a></h3></pre>
+       <pre><h3><a href="kontakteng.html"><i class="fa fa-address-book-o" style="font-size:26px"> </i>CONTACT US  </a>  <a href="infoeng.html"><i class="fa fa-info" style="font-size:26px"> </i>INFO</a>    <a href="oceniteeng.html"><i class="fa fa-star-o" style="font-size:26px"> </i>RATE US</a></h3></pre>
+       © 2019 MaxxProdaja all rights reserved.
 </div>
 </div>
 </div>

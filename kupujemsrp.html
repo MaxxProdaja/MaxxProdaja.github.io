@@ -21,20 +21,20 @@
   <ul class="navbar">
     <li class="nav-item-left" style="margin-left: 3%; padding:0% 0% 0% 0%;" > 
       <ul>
-        <li style="padding: 0% 0% 0% 0%;"><a href="index.html"><img src="srb.jpg" width="55%"></a></li>
-        <li style="padding-right: 0%;"><a href="index.html"><img src="eng.jpg" width="55%"></a></li>
+        <li style="padding: 0% 0% 0% 0%;"><a href="kupujemsrp.html"><img src="srb.jpg" width="55%"></a></li>
+        <li style="padding-right: 0%;"><a href="kupujemeng.html"><img src="eng.jpg" width="55%"></a></li>
       </ul>
     </li>
     <li class="nav-item-center" style="margin-right: 8%;"> <a href="#"> <img src="maxShort.png" width="75px"></a>
     </li><li class="nav-item-right dropdown"><a href="loginsrp.html"><i class="fa fa-fw fa-user" style="font-size: 4em; color: #ffa922;"></i></a></li>
   </ul>
 </div>
-<div class="navigacija" style="text-align: center;">
-  <a href="#"><img src="logokraj.png" height="50%" style="padding-top: 1%;"></a>
+<div class="navigacija" id="navigacija" style="text-align: center;">
+  <a href=""><img src="logokraj.png" height="50%" style="padding-top: 1%;"></a>
   <ul class="nav" style="padding-left: 22%;">
-    <li style="padding: 0% 9% 0% 9%;"><a href="pocetnasrp.html" style="text-align: center;"><b>POČETNA</b></a></li>
-    <li style="padding: 0% 9% 0% 9%;"><a href="kupujemsrp.html"><b>KUPUJEM</b></a></li>
-    <li style="padding: 0% 9% 0% 9%;"><a href="prodajemsrp.html"><b>PRODAJEM</b></a></li>
+    <li class="nav1" style="padding: 0% 9% 0% 9%;"><a href="pocetnasrp.html" style="text-align: center;"><b>POČETNA</b></a></li>
+    <li class="nav1 active" style="padding: 0% 9% 0% 9%;"><a href="kupujemsrp.html"><b>KUPUJEM</b></a></li>
+    <li class="nav1" style="padding: 0% 9% 0% 9%;"><a href="prodajemsrp.html"><b>PRODAJEM</b></a></li>
 </ul>
 </div>
 <div class="Centriran">
@@ -82,7 +82,7 @@
                                     Storage - 750GB SATA 7200/5400 rpm</p>
             </div></div>
             <div class="card-footer">
-          <small class="text-muted">Postavljeno pre 1 dan</small> <p style="float: right;"><b>Cena:700</b></p>
+          <small class="text-muted">Postavljeno pre 1 dan</small> <p style="float: right;"><b>Cena:700€</b></p>
            </div></div></div></div></div>
 
            <div class="container-fluid" id="oglas2">
@@ -94,7 +94,7 @@
                                   <p class="card-text">Kupujem automobil sa slike.Ponude i cene posaljite na broj:0655620376. Placam u kesu ili na lizing(po dogovoru). Maksimalna cena 5000e</p>
                 </div></div>
                 <div class="card-footer">
-              <small class="text-muted">Postavljeno pre 1 dan.</small><p style="float: right;"><b>Cena:5000</b></p>
+              <small class="text-muted">Postavljeno pre 1 dan.</small><p style="float: right;"><b>Cena:5000€</b></p>
                </div></div></div></div></div>
 
                <div class="container-fluid" id="oglas3">
@@ -106,7 +106,7 @@
                                       <p class="card-text">Kupujem espreso masinu po mogucnosti sa garantnim listom i probom na licu mesta.</p>
                     </div></div>
                     <div class="card-footer">
-                  <small class="text-muted">Postavljeno pre 1 dan.</small><p style="float: right;"><b>Cena:50</b></p>
+                  <small class="text-muted">Postavljeno pre 1 dan.</small><p style="float: right;"><b>Cena:50€</b></p>
                    </div></div></div></div></div>
 
                    <div class="container-fluid" id="oglas4">
@@ -130,7 +130,7 @@
                                               <p class="card-text">Kupujem alienware gaming laptop sa minimum 32gb rama, i 6gb grafickom. Samo licno preuzimanje i provera na licu mesta. placam to 1200e</p>
                             </div></div>
                             <div class="card-footer">
-                          <small class="text-muted">Postavljeno pre 2 dan.</small><p style="float: right;"><b>Cena:1200</b></p>
+                          <small class="text-muted">Postavljeno pre 2 dan.</small><p style="float: right;"><b>Cena:1200€</b></p>
                            </div></div></div></div></div>
 
                            <div class="container-fluid" id="oglas6">
@@ -158,93 +158,8 @@
                                    </div></div></div></div></div>
 
 </div>
-<script>
-  $(function() {
-    $("#prodaja1").change(function() {
-      if($("#laptop").is(":selected"))
-      {
-        $("#oglas0").css({"display":"none"});
-        $("#oglas1").css({"display":"block"});
-        $("#oglas1").css({"padding-top":"5%"});
-        $("#oglas2").css({"display":"none"});
-        $("#oglas3").css({"display":"none"});
-        $("#oglas4").css({"display":"none"});
-        $("#oglas5").css({"display":"block"});
-        $("#oglas6").css({"display":"none"});
-        $("#oglas7").css({"display":"none"});
-       }
-      else if($("#telefon").is(":selected"))
-      {
-        $("#oglas0").css({"display":"block"});
-        $("#oglas0").css({"padding-top":"5%"});
-        $("#oglas1").css({"display":"none"});
-        $("#oglas2").css({"display":"none"});
-        $("#oglas3").css({"display":"none"});
-        $("#oglas4").css({"display":"none"});
-        $("#oglas5").css({"display":"none"});
-        $("#oglas6").css({"display":"none"});
-        $("#oglas7").css({"display":"none"});
-      }
-      else if($("#auto").is(":selected"))
-      {
-        $("#oglas0").css({"display":"none"});
-        $("#oglas2").css({"padding-top":"5%"});
-        $("#oglas1").css({"display":"none"});
-        $("#oglas2").css({"display":"block"});
-        $("#oglas3").css({"display":"none"});
-        $("#oglas4").css({"display":"none"});
-        $("#oglas5").css({"display":"none"});
-        $("#oglas6").css({"display":"none"});
-        $("#oglas7").css({"display":"none"});
-      }
-      else if($("#kucni").is(":selected"))
-      {
-        $("#oglas0").css({"display":"none"});
-        $("#oglas3").css({"padding-top":"5%"});
-        $("#oglas1").css({"display":"none"});
-        $("#oglas2").css({"display":"none"});
-        $("#oglas3").css({"display":"block"});
-        $("#oglas4").css({"display":"none"});
-        $("#oglas5").css({"display":"none"});
-        $("#oglas6").css({"display":"none"});
-        $("#oglas7").css({"display":"none"});
-      }
-      else if($("#knjiga").is(":selected")){
-        $("#oglas0").css({"display":"none"});
-        $("#oglas7").css({"padding-top":"5%"});
-        $("#oglas1").css({"display":"none"});
-        $("#oglas2").css({"display":"none"});
-        $("#oglas3").css({"display":"none"});
-        $("#oglas4").css({"display":"none"});
-        $("#oglas5").css({"display":"none"});
-        $("#oglas6").css({"display":"none"});
-        $("#oglas7").css({"display":"block"});
-      }
-      else if($("#namestaj").is(":selected")){
-        $("#oglas0").css({"display":"none"});
-        $("#oglas4").css({"padding-top":"5%"});
-        $("#oglas1").css({"display":"none"});
-        $("#oglas2").css({"display":"none"});
-        $("#oglas3").css({"display":"none"});
-        $("#oglas4").css({"display":"block"});
-        $("#oglas5").css({"display":"none"});
-        $("#oglas6").css({"display":"none"});
-        $("#oglas7").css({"display":"none"});
-      }
-      else if($("#drugo").is(":selected")){
-        $("#oglas0").css({"display":"block"});
-        $("#oglas1").css({"display":"block"});
-        $("#oglas2").css({"display":"block"});
-        $("#oglas3").css({"display":"block"});
-        $("#oglas4").css({"display":"block"});
-        $("#oglas5").css({"display":"block"});
-        $("#oglas6").css({"display":"block"});
-        $("#oglas7").css({"display":"block"});
-        $("#oglas0", "#oglas1", "oglas2", "#oglas3").css({"padding-top":"0%"});
-      }
-    })
-    
-  })
+<script src="homepage1.js">
+ 
   </script>
 <div class="footer">
   <div id="button"></div>
