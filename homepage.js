@@ -1,4 +1,4 @@
-  var slike = ["mejpg1.png", "mejpg3.png", "mejpg4.png", "mejpg.png"];
+  var slike = ["slike/mejpg1.png", "slike/mejpg3.png", "slike/mejpg4.png", "slike/mejpg.png"];
 
   var i = 0;
   setInterval(function(){
