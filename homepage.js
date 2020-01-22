@@ -6,6 +6,8 @@
       i = 0;
     }
     document.getElementById("mojejpg").src = slike[i];
+    $("#mojejpg").css({"transition":"width 2s"});
+    $("#mojejpg").css({"animation-duration":"1s"});
     i++;
   }, 2000);
 
