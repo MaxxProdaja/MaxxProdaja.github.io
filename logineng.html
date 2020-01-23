@@ -19,14 +19,10 @@
 </div>
 <div class="showme">
   <ul class="navbar">
-    <li class="nav-item-left" style="margin-left: 3%; padding:0% 0% 0% 0%;" > 
-      <ul>
-        <li style="padding: 0% 0% 0% 0%;"><a href="loginsrp.html"><img src="slike/srb.jpg" width="55%"></a></li>
-        <li style="padding-right: 0%;"><a href="logineng.html"><img src="slike/eng.jpg" width="55%"></a></li>
-      </ul>
-    </li>
-    <li class="nav-item-center" style="margin-right: 8%;"> <a href="#"> <img src="slike/maxShort.png" width="75px"></a>
-    </li><li class="nav-item-right dropdown"><a href="logineng.html"><i class="fa fa-fw fa-user active" style="font-size: 4em; color: #ffa922;"></i></a></li>
+    <li class="nav-item-left" style="text-align: center; margin-left: 3%; margin-top: -2%;"> <a href="loginsrp.html"><img src="slike/srb.jpg" width="55%"></a></li>
+    <li class="nav-item-left" style="text-align: center; margin-left: -37%; margin-top: -2%;"><a href="logineng.html"><img src="slike/eng.jpg" width="55%"></a></li>
+    <li class="nav-item-center" style="text-align: center; margin-right: 8%;"> <a href="#"> <img src="slike/maxShort.png" width="75px"></a></li>
+    <li class="nav-item-right" style="text-align: center;"><a href="logineng.html"><i class="fa fa-fw fa-user" style="font-size: 3.5em; color: #ffa922;"></i></a></li>
   </ul>
 </div>
 <div class="navigacija" id="navigacija" style="text-align: center;">
@@ -37,33 +33,35 @@
     <li class="nav1" style="padding: 0% 9% 0% 9%;"><a href="prodajemeng.html"><b>SELL</b></a></li>
 </ul>
 </div>
+<script src="homepage2.js"></script>
 <div class="Centriran">
   <div class="signup-form" id="napravi">
     <form action="/examples/actions/confirmation.php" method="post">
-		<h2>Register</h2>
-		<p class="hint-text">Sign in. it's free and only takes a minute.</p>
-        <div class="form-group">
-        <div class="col-xs-6"><input type="text" class="form-control" name="first_name" placeholder="Name" required="required"></div>
-        </div>
-        <div class="form-group">
-				<div class="col-xs-6"><input type="text" class="form-control" name="last_name" placeholder="Surname" required="required"></div>     	
-        </div>
-        <div class="form-group">
-        	<input type="email" class="form-control" name="email" placeholder="Email" required="required">
-        </div>
-		<div class="form-group">
-            <input type="password" class="form-control" name="password" placeholder="Password" required="required">
-        </div>
-		<div class="form-group">
-            <input type="password" class="form-control" name="confirm_password" placeholder="Confirm password" required="required">
-        </div>        
-        <div class="form-group">
-			<label class="checkbox-inline"><input type="checkbox" required="required">I agree <a href="index.html">the terms</a></label>
-		</div>
-		<div class="form-group">
-            <button class="btn btn-dark btn-lg btn-block">Register</button>
-        </div>
-    </form>
+      <h2>Register</h2>
+      <p class="hint-text">Sign in. it's free and only takes a minute.</p>
+          <div class="form-group">
+          <div class="col-xs-6">
+            <input type="text" oninput="promeni2(this)" id="imeprz" class="form-control" placeholder="NAME_SURNAME" title="This field mus be in format |NAME_SURNAME| (space between the surname is optional)" required ></div>
+          </div>
+          <div class="form-group">
+          <div class="col-xs-6"><input id="nadimak" type="text" class="form-control" placeholder="USER NAME"></div>     	
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" class="form-control" placeholder="Email" required title="E-mail address: must begin with a letter, followed by special characters, numbers or letters, but before the @ sign must be a letter or number. The rest is standard as for all e-mail addresses">
+          </div>
+      <div class="form-group">
+              <input type="password" id="password" class="form-control" title="Minimum 6 characters" placeholder="Password" oninvalid="this.setCustomValidity('Molim vas popunite ovo polje')">
+          </div>
+      <div class="form-group">
+              <input type="password" id="confirm_password" class="form-control" placeholder="Confirm password" required>
+          </div>        
+          <div class="form-group">
+        <label class="checkbox-inline"><input type="checkbox" required="required" oninvalid="this.setCustomValidity('Please check this field first')">I agree<a href="index.html">the terms</a></label>
+      </div>
+      <div class="form-group">
+              <button class="btn btn-dark btn-block" onclick="provera1()">Register</button>
+          </div>
+      </form>
   <div class="text-center" id="ulogujse">you already have an account? <a href="#" style="color: tomato;"> Log in.</a></div>
 
 </div>

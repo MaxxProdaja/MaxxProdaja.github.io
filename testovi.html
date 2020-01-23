@@ -9,7 +9,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="homepage.css">
   <title>MaxxProdaja</title>
-  <link rel="shortcut icon" href="maxShort.png"/>
+  <link rel="shortcut icon" href="slike/maxShort.png"/>
 </head>
 <body>
 <div class="showhim container">
@@ -19,162 +19,138 @@
 </div>
 <div class="showme">
   <ul class="navbar">
-    <li class="nav-item-left" style="margin-left: 3%; padding:0% 0% 0% 0%;" > 
-      <ul>
-        <li style="padding: 0% 0% 0% 0%;"><a href="index.html"><img src="srb.jpg" width="55%"></a></li>
-        <li style="padding-right: 0%;"><a href="index.html"><img src="eng.jpg" width="55%"></a></li>
-      </ul>
-    </li>
-    <li class="nav-item-center" style="margin-right: 8%;"> <a href="#"> <img src="maxShort.png" width="75px"></a>
-    </li><li class="nav-item-right dropdown"><a href="loginsrp.html"><i class="fa fa-fw fa-user" style="font-size: 4em; color: #ffa922;"></i></a></li>
+    <li class="nav-item-left" style="text-align: center; margin-left: 3%; margin-top: -2%;"> <a href="loginsrp.html"><img src="slike/srb.jpg" width="55%"></a></li>
+    <li class="nav-item-left" style="text-align: center; margin-left: -37%; margin-top: -2%;"><a href="logineng.html"><img src="slike/eng.jpg" width="55%"></a></li>
+    <li class="nav-item-center" style="text-align: center; margin-right: 8%;"> <a href="#"> <img src="slike/maxShort.png" width="75px"></a></li>
+    <li class="nav-item-right" style="text-align: center;"><a href="loginsrp.html"><i class="fa fa-fw fa-user" style="font-size: 3.5em; color: #ffa922;"></i></a></li>
   </ul>
 </div>
 <div class="navigacija" style="text-align: center;">
-  <a href="#"><img src="logokraj.png" height="50%" style="padding-top: 1%;"></a>
+  <a href="#"><img src="slike/logokraj.png" height="50%" style="padding-top: 1%;"></a>
   <ul class="nav" style="padding-left: 22%;">
     <li style="padding: 0% 9% 0% 9%;"><a href="pocetnasrp.html" style="text-align: center;"><b>POČETNA</b></a></li>
     <li style="padding: 0% 9% 0% 9%;"><a href="kupujemsrp.html"><b>KUPUJEM</b></a></li>
     <li style="padding: 0% 9% 0% 9%;"><a href="prodajemsrp.html"><b>PRODAJEM</b></a></li>
 </ul>
 </div>
+<div class="Centriran">
+  <div class="signup-form" id="napravi">
+    <form action="/examples/actions/confirmation.php" method="post">
+		<h2>Napravi nalog</h2>
+		<p class="hint-text">Napravite vas nalog. Besplatno je i traje samo minuta.</p>
+        <div class="form-group">
+        <div class="col-xs-6">
+          <input type="text" oninput="promeni2(this)" id="imeprz" class="form-control" placeholder="IME_PREZIME" title="MORA BITI U FORMATU | IME_PREZIME | (Prezime moze da sadrzi razmak)" required ></div>
+        </div>
+        <div class="form-group">
+				<div class="col-xs-6"><input id="nadimak" type="text" class="form-control" placeholder="KORISNICKO IME"></div>     	
+        </div>
+        <div class="form-group">
+        	<input type="email" id="email" class="form-control" placeholder="Email" required title="E-mail adresa: mora da pocinje slovom, nakon toga mogu biti specijalni karakteri, cifre ili slova, ali pre znaka @ mora biti slovo ili cifra. Ostali deo je standardni kao za sve e-mail adrese">
+        </div>
+		<div class="form-group">
+            <input type="password" id="password" class="form-control" title="Minimum 6 karaktera" placeholder="Sifra" oninvalid="this.setCustomValidity('Molim vas popunite ovo polje')">
+        </div>
+		<div class="form-group">
+            <input type="password" id="confirm_password" class="form-control" placeholder="Potvrdi sifru" required>
+        </div>        
+        <div class="form-group">
+			<label class="checkbox-inline"><input type="checkbox" required="required" oninvalid="this.setCustomValidity('Prvo cekirajte ovo polje')">Prihvatam <a href="index.html">Uslove koricenja</a></label>
+		</div>
+		<div class="form-group">
+            <button class="btn btn-dark btn-block" onclick="provera()">Prijavi se</button>
+        </div>
+    </form>
+    <script>
+      function promeni2(obj)
+        {
+            var lbl = document.getElementById("imeprz");
+            var d = new Date();
+            document.getElementById('nadimak').value =  obj.value + d.getFullYear();
+        } 
+        var password = document.getElementById("password")
+  , confirm_password = document.getElementById("confirm_password");
 
-<div class="Centriran" >
-  <div class="filter showhim"><i class="fa fa-filter" aria-hidden="true">Filtriraj</i></div>
-  <div class="filteropcije showme"><pre>Sta prodajete?
-    <select class="form-control" id="prodaja1">
-      <option value="nista">Izaberi..</option>
-      <option id="laptop">Laptop</option>
-      <option id="telefon">Telefon</option>
-      <option id="auto">Automobil</option>
-      <option id="kucni">Kucni uredjaj</option>
-      <option id="knjiga">Knjigu</option>
-      <option id="namestaj">Namestaj</option>
-      <option id="drugo">Drugo...</option>
-    </select>
-    <label>Odaberi maximalnu cenu.</label><label id="rez1"></label>
-    <input id="cena" type="range" class="form-control-range" onmousemove="promeni1(this)">
-  </pre></div>
-  <div class="container-fluid" style="padding-top: 5%;" id="oglas0">
-    <div class="row"> <div class="col-12 mt-3"> <div class="card"><div class="card-horizontal"> <div class="img-square-wrapper">
-    <img class="oglas" src="oglas0.jpg" alt="Card image cap">
-                      </div>
-                      <div class="card-body">
-                          <h4 class="card-title">Otkup Iphone telefona</h4>
-                          <p class="card-text">Kupujem iPhone 6, iPhone 6 Plus, iPhone 7, iPhone 7 Plus, iPhone 8, iPhone 8 Plus, iPhone X, XS, XS Max, 11, 11pro sa polupanim/razlupanim/ostecenim displejom ali sa ispravnom plocom, stanje nebitno, bitno je samo da ploca radi i da je 100% ispravna, oprema pozeljna. . . </p>
-        </div></div>
-        <div class="card-footer">
-      <small class="text-muted">Postavljeno pre 5 sati.</small> <p id="cena1" style="float: right;"><b>Cena:499€</b></p>
-       </div></div></div></div></div>
-
-       <div class="container-fluid" id="oglas1">
-        <div class="row"> <div class="col-12 mt-3"> <div class="card"><div class="card-horizontal"> <div class="img-square-wrapper">
-        <img class="oglas" src="oglas1.jpg" alt="Card image cap">
-                          </div>
-                          <div class="card-body">
-                              <h4 class="card-title">Kupujem laptop</h4>
-                              <p class="card-text">Savrseno ocuvan, baterija ispravna, bez garancije.
-
-                                Specifikacije:
-                                
-                                    CPU - Intel® Core™ i7-3630QM CPU @ 2.40GHz
-                                    OS - Windows 10
-                                    Chpset - Intel® HM76
-                                    Memory - DDR3 1333/1600MHz, 2 slots, Max. 8GB
-                                    Display- 15.6" Full HD (1920x1080), Anti-glare
-                                    GPU - NVIDIA GeForce GTX 660M (2GB GDDR5)
-                                    Integrated GPU - Intel(R) HD Graphics 4000
-                                    Storage - 750GB SATA 7200/5400 rpm</p>
-            </div></div>
-            <div class="card-footer">
-          <small class="text-muted">Postavljeno pre 1 dan</small> <p id="cena2" style="float: right;"><b>Cena:700€</b></p>
-           </div></div></div></div></div>
-
-           <div class="container-fluid" id="oglas2">
-            <div class="row"> <div class="col-12 mt-3"> <div class="card"><div class="card-horizontal"> <div class="img-square-wrapper">
-            <img class="oglas" src="oglas2.jpg" alt="Card image cap">
-                              </div>
-                              <div class="card-body">
-                                  <h4 class="card-title">Kupujem Automobil toyota rav4</h4>
-                                  <p class="card-text">Kupujem automobil sa slike.Ponude i cene posaljite na broj:0655620376. Placam u kesu ili na lizing(po dogovoru). Maksimalna cena 5000e</p>
-                </div></div>
-                <div class="card-footer">
-              <small class="text-muted">Postavljeno pre 1 dan.</small><p id="cena3" style="float: right;"><b>Cena:5000€</b></p>
-               </div></div></div></div></div>
-
-               <div class="container-fluid" id="oglas3">
-                <div class="row"> <div class="col-12 mt-3"> <div class="card"><div class="card-horizontal"> <div class="img-square-wrapper">
-                <img class="oglas" src="oglas3.jpg" alt="Card image cap">
-                                  </div>
-                                  <div class="card-body">
-                                      <h4 class="card-title">Kupujem Espresso masinu</h4>
-                                      <p class="card-text">Kupujem espreso masinu po mogucnosti sa garantnim listom i probom na licu mesta.</p>
-                    </div></div>
-                    <div class="card-footer">
-                  <small class="text-muted">Postavljeno pre 1 dan.</small><p id="cena4" style="float: right;"><b>Cena:50€</b></p>
-                   </div></div></div></div></div>
-
-                   <div class="container-fluid" id="oglas4">
-                    <div class="row"> <div class="col-12 mt-3"> <div class="card"><div class="card-horizontal"> <div class="img-square-wrapper">
-                    <img class="oglas" src="oglas4.jpg" alt="Card image cap">
-                                      </div>
-                                      <div class="card-body">
-                                          <h4 class="card-title">Barske stolice</h4>
-                                          <p class="card-text">Kupujem luksuzne barske stolice u okolini Novog Sada. Licno preuzimanje. Cena nije bitna samo trazim vrhunski kvalitet i dizajn...</p>
-                        </div></div>
-                        <div class="card-footer">
-                      <small class="text-muted">Postavljeno pre 2 dan.</small><p id="cena5" style="float: right;"><b>Cena:30€</b></p>
-                       </div></div></div></div></div>
-
-                       <div class="container-fluid" id="oglas5">
-                        <div class="row"> <div class="col-12 mt-3"> <div class="card"><div class="card-horizontal"> <div class="img-square-wrapper">
-                        <img class="oglas" src="oglas5.jpg" alt="Card image cap">
-                                          </div>
-                                          <div class="card-body">
-                                              <h4 class="card-title">Alienware laptop</h4>
-                                              <p class="card-text">Kupujem alienware gaming laptop sa minimum 32gb rama, i 6gb grafickom. Samo licno preuzimanje i provera na licu mesta. placam to 1200e</p>
-                            </div></div>
-                            <div class="card-footer">
-                          <small class="text-muted">Postavljeno pre 2 dan.</small><p id="cena6" style="float: right;"><b>Cena:1200€</b></p>
-                           </div></div></div></div></div>
-
-                           <div class="container-fluid" id="oglas6">
-      
-                            <div class="row"> <div class="col-12 mt-3"> <div class="card"><div class="card-horizontal"> <div class="img-square-wrapper">
-                            <img class="oglas" src="oglas6.jpg" alt="Card image cap">
-                                              </div>
-                                              <div class="card-body">
-                                                  <h4 class="card-title">Kucni ljubimac</h4>
-                                                  <p class="card-text">Kupujem kucnog ljubimca sa zavedenim dokumentima i pasosom.Prioritet imaju manji kucni ljubimci (ptica, hrcak i td...). Kupuem iskljucivo mladuncad ne starija od 2 meseca.</p>
-      
-                                </div></div>
-                                <div class="card-footer">
-                              <small class="text-muted">Postavljeno pre 2 dan.</small><p id="cena7" style="float: right;"><b>Cena:50€</b></p>
-                               </div></div></div></div>
-                              </div>
-
-                               <div class="container-fluid" id="oglas7">
-      
-                                <div class="row"> <div class="col-12 mt-3"> <div class="card"><div class="card-horizontal"> <div class="img-square-wrapper">
-                                <img class="oglas" src="oglas7.jpg" alt="Card image cap">
-                                                  </div>
-                                                  <div class="card-body">
-                                                      <h4 class="card-title">Udzbenik</h4>
-                                                      <p class="card-text">Vrsimo otkup skolskih udzbenika svih generacija. Cena zavisi od kvaliteta.</p>
-                                    </div></div>
-                                    <div class="card-footer">
-                                  <small class="text-muted">Postavljeno pre 6 dan.</small><p id="cena8" style="float: right;"><b>Cena:10€</b></p>
-                                   </div></div></div></div></div>
-                                   <div id="nemaoglasa" style="display: none; padding: 20%;"><h1>NAZALOST NEMA TAKVIH OGLASA</h1></div>
+function validatePassword(){
+  if(password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Lozinke se ne poklapaju!");
+    exit;
+  } else {
+    confirm_password.setCustomValidity('');
+    exit;
+  }
+}
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
+</script>
+<script>
+function provera()
+        {
+          var imePrez1 = document.getElementById("imeprz");
+            var mejl1 = document.getElementById("email");
+            var imePrez = document.getElementById("imeprz").value;
+            var mejl = document.getElementById("email").value;
+            var uzorakIme = /^[A-Z]{1,}[_]{1}[A-Z ]{1,}$/;
+            var uzorakmejl = /^[a-zA-Z]{1}.{1,}\w{1}@(hotmail|live|gmail|np.ac)(.com|.rs)$/; 
+            var uzorakporuka= /.{10,500}[\d\d\d\/\d\d\d-\d\d-\d\d]$/;
+            if(uzorakIme.test(imePrez))
+             { 
+            imePrez1.setCustomValidity('');
+               if(uzorakmejl.test(mejl))
+               {
+                mejl1.setCustomValidity(''); 
+                exit;
+               }              
+               else
+               mejl1.setCustomValidity('E-mail adresa: mora da pocinje slovom, nakon toga mogu biti specijalni karakteri, cifre ili slova, ali pre znaka @ mora biti slovo ili cifra.Ostali deo je standardni kao za sve e-mail adrese');
+             }
+            else
+            imePrez1.setCustomValidity('MORA BITI U FORMATU | IME_PREZIME | (Prezime moze da sadrzi razmak)');
+        }
+  imePrez.onkeyup= provera;
+  mejl.onkeyup= provera;
+      </script>
+  <div class="text-center" id="ulogujse">Vec imate nalog? <a href="#" style="color: tomato;"> Uloguj se.</a></div>
 
 </div>
-<script src="homepage.js"></script>
+  <div class="signup-form" id="napravljen" style="display: none;">
+    <form action="/examples/actions/confirmation.php" method="post">
+    <h2>Ulogujte se</h2>
+    <p class="hint-text">Prijavite se na vas nalog.</p>
+        <div class="form-group">
+          <input type="email" class="form-control" name="email" placeholder="Email" required="required">
+        </div>
+    <div class="form-group">
+            <input type="password" class="form-control" name="password" placeholder="Sifra" required="required">
+        </div>        
+        <div class="form-group">
+      <label class="checkbox-inline"><input type="checkbox">Ostavi me prijavljenog.</label>
+    </div>
+    <div class="form-group">
+            <button class="btn btn-dark btn-lg btn-block">Prijavi se</button>
+        </div>
+    </form>
+  <div class="text-center" id="napravii">Nemate nalog? <a href="#" style="color: tomato;"> Napravi nalog.</a></div>
+  </div>
+<script type="text/javascript">
+  $('#napravii').click(function() {  
+     $("#napravi").css({"display":"block"});
+     $("#napravljen").css({"display":"none"});
+  });
+  $('#ulogujse').click(function() {  
+     $("#napravi").css({"display":"none"});
+     $("#napravljen").css({"display":"block"});
+  });
+</script>
+
 <div class="footer">
   <div id="button"></div>
 <div id="container">
 <div id="cont">
 <div class="footer_center">
        <pre><h3><a href="kontaktsrp.html"><i class="fa fa-address-book-o" style="font-size:26px"> </i>KONTAKTIRAJTE NAS  </a>  <a href="index.html"><i class="fa fa-info" style="font-size:26px"> </i>INFO</a>    <a href="ocenitesrp.html"><i class="fa fa-star-o" style="font-size:26px"> </i>OCENITE NAS</a></h3></pre>
-</div>
+       © 2019 MaxxProdaja sva prava sadrzana.
+      </div>
 </div>
 </div>
 </div>
